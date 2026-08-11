@@ -1,4 +1,4 @@
-<title>THE VEIL BURNS — "BURN" 10s Loop Concept</title>
+<title>PHOENIX HOUR — "BURN" 10s Loop Concept v2</title>
 <style>
 :root{
   --ground:#14100D;
@@ -7,75 +7,73 @@
   --edge:#33291F;
   --coral:#F0785A;
   --gold:#FFB25C;
+  --sun:#FFD79A;
+  --terra:#B4553C;
   --teal:#3E7C7B;
   --teal-lo:#21454A;
   --moss:#8B9A4B;
+  --rose:#D98E7A;
   --veil:#C6BCD2;
   --veil-dim:#8E8697;
   --veil-faint:#5F5A66;
   --font-display:"Haettenschweiler","Arial Narrow Bold","Impact","Franklin Gothic Bold",sans-serif;
   --font-body:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --font-mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
-  --measure:70ch;
 }
 *{box-sizing:border-box}
-body{
-  margin:0;
-  background:var(--ground);
-  color:var(--veil);
-  font-family:var(--font-body);
-  font-size:17px;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:var(--measure);margin:0 auto;padding:0 24px}
-h1,h2,h3{text-wrap:balance;margin:0}
+body{margin:0;background:var(--ground);color:var(--veil);font-family:var(--font-body);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:72ch;margin:0 auto;padding:0 24px}
+.wide{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+p{margin:0 0 16px}
+a{color:var(--coral);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+strong{color:#EFE7F0;font-weight:650}
+em.key{color:var(--gold);font-style:normal;font-weight:650}
+code{font-family:var(--font-mono);font-size:.88em;color:var(--gold)}
 
-/* ── hero ───────────────────────────────────────── */
-.hero{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--edge)}
+/* hero */
+.hero{position:relative;min-height:74vh;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--edge)}
 #embers{position:absolute;inset:0;width:100%;height:100%;display:block}
-.hero-glow{position:absolute;left:50%;top:8%;width:min(760px,120vw);aspect-ratio:1;transform:translateX(-50%);
-  background:radial-gradient(circle,rgba(62,124,123,.30) 0%,rgba(62,124,123,.10) 38%,transparent 68%);pointer-events:none}
-.hero-floor{position:absolute;left:0;right:0;bottom:0;height:42%;pointer-events:none;
-  background:linear-gradient(to top,rgba(240,120,90,.22),rgba(240,120,90,.05) 45%,transparent)}
-.hero-inner{position:relative;width:100%;padding:80px 0 64px}
-.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);margin:0 0 22px}
+.hero-glow{position:absolute;left:50%;top:10%;width:min(820px,130vw);aspect-ratio:1;transform:translateX(-50%);
+  background:radial-gradient(circle,rgba(255,178,92,.22) 0%,rgba(240,120,90,.12) 40%,transparent 70%);pointer-events:none}
+.hero-floor{position:absolute;left:0;right:0;bottom:0;height:44%;pointer-events:none;
+  background:linear-gradient(to top,rgba(180,85,60,.30),rgba(240,120,90,.07) 50%,transparent)}
+.hero-inner{position:relative;width:100%;padding:76px 0 60px}
+.eyebrow{font-family:var(--font-mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--coral);margin:0 0 20px}
 h1{font-family:var(--font-display);font-weight:400;text-transform:uppercase;
-  font-size:clamp(3.6rem,15vw,8.5rem);line-height:.86;letter-spacing:.005em;color:var(--coral);
-  text-shadow:0 0 60px rgba(240,120,90,.35)}
-.sub{font-size:clamp(1rem,2.4vw,1.3rem);color:var(--veil);margin:26px 0 0;max-width:44ch;font-style:italic}
-.credits{margin:34px 0 0;font-family:var(--font-mono);font-size:12.5px;line-height:1.9;color:var(--veil-dim);letter-spacing:.02em}
+  font-size:clamp(3.4rem,14vw,8rem);line-height:.86;color:var(--gold);text-shadow:0 0 70px rgba(255,178,92,.30)}
+.sub{font-size:clamp(1rem,2.4vw,1.28rem);color:var(--veil);margin:24px 0 0;max-width:46ch;font-style:italic}
+.credits{margin:32px 0 0;font-family:var(--font-mono);font-size:12.5px;line-height:1.9;color:var(--veil-dim)}
 .credits b{color:var(--veil);font-weight:600}
 
-/* ── structure ──────────────────────────────────── */
-section{padding:64px 0;border-bottom:1px solid var(--edge)}
+/* sections */
+section{padding:60px 0;border-bottom:1px solid var(--edge)}
 .sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 8px}
 .sec-num{font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;color:var(--coral);flex:none}
 h2{font-family:var(--font-display);text-transform:uppercase;font-weight:400;letter-spacing:.02em;
-  font-size:clamp(1.75rem,5vw,2.6rem);line-height:1;color:var(--veil)}
-.sec-sub{color:var(--veil-dim);font-size:14.5px;margin:0 0 34px;padding-left:0}
+  font-size:clamp(1.7rem,5vw,2.5rem);line-height:1;color:var(--veil)}
+.sec-sub{color:var(--veil-dim);font-size:14.5px;margin:0 0 32px}
 h3{font-family:var(--font-body);font-size:1rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
-  color:var(--gold);margin:36px 0 12px}
-p{margin:0 0 16px}
-a{color:var(--coral);text-underline-offset:3px}
-a:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
-strong{color:#EFE7F0;font-weight:650}
-em.key{color:var(--gold);font-style:normal;font-weight:650}
+  color:var(--gold);margin:34px 0 12px}
 
-/* ── callout ────────────────────────────────────── */
-.callout{background:var(--ground-2);border-left:3px solid var(--coral);padding:22px 24px;margin:0 0 34px;border-radius:0 4px 4px 0}
+/* callout */
+.callout{background:var(--ground-2);border-left:3px solid var(--coral);padding:22px 24px;margin:0 0 32px;border-radius:0 4px 4px 0}
 .callout p:last-child{margin-bottom:0}
 .callout .tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--coral);display:block;margin-bottom:10px}
 .callout.teal{border-left-color:var(--teal)}
 .callout.teal .tag{color:var(--teal)}
+.callout.gold{border-left-color:var(--gold)}
+.callout.gold .tag{color:var(--gold)}
 
-/* ── thesis ─────────────────────────────────────── */
-.thesis{border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);padding:34px 0;margin:34px 0}
-.thesis p{font-size:clamp(1.15rem,3vw,1.5rem);line-height:1.42;color:var(--gold);margin:0 0 14px}
+/* thesis */
+.thesis{border-top:1px solid var(--edge);border-bottom:1px solid var(--edge);padding:32px 0;margin:32px 0}
+.thesis p{font-size:clamp(1.1rem,3vw,1.45rem);line-height:1.42;color:var(--gold);margin:0 0 14px}
 .thesis p:last-child{margin:0;font-size:1rem;color:var(--veil-dim);line-height:1.6}
 
-/* ── tables ─────────────────────────────────────── */
-.scroll{overflow-x:auto;margin:0 0 22px;-webkit-overflow-scrolling:touch}
+/* tables */
+.scroll{overflow-x:auto;margin:0 0 22px}
 table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:440px}
 th{text-align:left;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--veil-faint);font-weight:400;padding:0 14px 9px 0;border-bottom:1px solid var(--edge);white-space:nowrap}
@@ -86,50 +84,62 @@ tbody tr:last-child td{border-bottom:none}
 .ok{color:var(--moss)}
 .no{color:var(--coral)}
 
-/* ── palette ────────────────────────────────────── */
-.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:2px;margin:0 0 24px}
-.sw{padding:16px 12px 13px;min-height:104px;display:flex;flex-direction:column;justify-content:flex-end}
-.sw span{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em}
-.sw .nm{font-size:11px;letter-spacing:.04em;margin-bottom:3px;font-family:var(--font-body);font-weight:600}
-.sw .rl{opacity:.72;margin-top:5px;line-height:1.35;font-size:9.5px}
+/* concept cards */
+.concepts{display:flex;flex-direction:column;gap:56px;margin-top:8px}
+.cpt{background:var(--ground-2);border:1px solid var(--edge);border-radius:5px;overflow:hidden}
+.cpt-art{display:block;width:100%;height:auto;background:#0C0908}
+.cpt-body{padding:26px 28px 28px}
+.cpt-tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);display:block;margin-bottom:9px}
+.cpt h4{font-family:var(--font-display);text-transform:uppercase;font-weight:400;font-size:clamp(1.6rem,4.5vw,2.2rem);
+  letter-spacing:.02em;color:var(--veil);line-height:1;margin-bottom:14px}
+.cpt h4 small{display:block;font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:.1em;
+  color:var(--gold);margin-top:9px;text-transform:none}
+.cpt p{font-size:15px}
+.cpt.pick{border-color:var(--gold)}
+.cpt.pick .cpt-tag{color:var(--gold)}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0;margin:20px 0 0;border-top:1px solid var(--edge)}
+.meta div{padding:15px 18px 15px 0;border-right:1px solid var(--edge)}
+.meta div:last-child{border-right:none}
+.meta span{display:block;font-family:var(--font-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--veil-faint);margin-bottom:6px}
+.meta p{margin:0;font-size:13.5px;line-height:1.5;color:var(--veil)}
 
-/* ── loop diagram ───────────────────────────────── */
-figure{margin:0 0 26px}
-figcaption{font-size:13px;color:var(--veil-dim);margin-top:12px;font-style:italic}
-.diagram{background:var(--ground-2);border:1px solid var(--edge);border-radius:4px;padding:26px 20px}
-.diagram svg{display:block;width:100%;height:auto;max-width:430px;margin:0 auto}
-
-/* ── code ───────────────────────────────────────── */
-.prompt{background:#100C0A;border:1px solid var(--edge);border-radius:4px;margin:0 0 22px;overflow:hidden}
-.prompt-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;
-  padding:9px 16px;background:var(--ground-3);border-bottom:1px solid var(--edge)}
+/* prompt */
+.prompt{background:#100C0A;border:1px solid var(--edge);border-radius:4px;margin:20px 0 0;overflow:hidden}
+.prompt-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 16px;background:var(--ground-3);border-bottom:1px solid var(--edge)}
 .prompt-bar span{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 .prompt-bar .cnt{color:var(--veil-faint);letter-spacing:.1em}
-.prompt pre{margin:0;padding:18px 16px;overflow-x:auto;font-family:var(--font-mono);font-size:12.5px;line-height:1.72;color:var(--veil);white-space:pre-wrap;word-break:break-word}
+.prompt pre{margin:0;padding:16px;overflow-x:auto;font-family:var(--font-mono);font-size:12.5px;line-height:1.7;color:var(--veil);white-space:pre-wrap;word-break:break-word}
 .prompt.neg pre{color:var(--veil-dim)}
 .prompt.neg .prompt-bar span{color:var(--coral)}
 
-/* ── variations ─────────────────────────────────── */
-.vars{display:flex;flex-direction:column;gap:2px;margin:0 0 8px}
-.var{background:var(--ground-2);padding:22px 24px;border-left:3px solid var(--edge)}
-.var.pick{border-left-color:var(--gold);background:var(--ground-3)}
-.var h4{margin:0 0 10px;font-family:var(--font-display);text-transform:uppercase;font-weight:400;
-  font-size:1.35rem;letter-spacing:.03em;color:var(--veil)}
-.var h4 small{font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.12em;
-  color:var(--veil-faint);display:block;margin-top:5px}
-.var p{font-size:14.5px;margin:0 0 9px}
-.var p:last-child{margin:0}
-.var .lbl{font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--veil-faint)}
+/* palette */
+.pal{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:2px;margin:0 0 24px}
+.sw{padding:16px 12px 13px;min-height:98px;display:flex;flex-direction:column;justify-content:flex-end}
+.sw span{display:block;font-family:var(--font-mono);font-size:10px;letter-spacing:.08em}
+.sw .nm{font-size:11px;margin-bottom:3px;font-family:var(--font-body);font-weight:600;letter-spacing:.03em}
+.sw .rl{opacity:.72;margin-top:5px;font-size:9.5px;line-height:1.35}
 
-/* ── asks ───────────────────────────────────────── */
-.asks{list-style:none;padding:0;margin:0 0 26px;counter-reset:a}
+/* diagram */
+figure{margin:0 0 24px}
+figcaption{font-size:13px;color:var(--veil-dim);margin-top:12px;font-style:italic}
+.diagram{background:var(--ground-2);border:1px solid var(--edge);border-radius:4px;padding:24px 20px}
+.diagram svg{display:block;width:100%;height:auto;max-width:420px;margin:0 auto}
+
+/* asks */
+.asks{list-style:none;padding:0;margin:0 0 24px;counter-reset:a}
 .asks li{counter-increment:a;position:relative;padding:0 0 16px 42px;font-size:15.5px}
 .asks li::before{content:counter(a);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;
   border:1px solid var(--coral);color:var(--coral);font-family:var(--font-mono);font-size:12px;
   display:flex;align-items:center;justify-content:center}
-footer{padding:56px 0 80px;text-align:center;color:var(--veil-faint);font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em}
+footer{padding:54px 0 78px;text-align:center;color:var(--veil-faint);font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em}
+
+.flick{animation:fl 3.1s ease-in-out infinite}
+.flick2{animation:fl 4.7s ease-in-out infinite}
+@keyframes fl{0%,100%{opacity:.95}50%{opacity:.55}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
-@media (max-width:560px){body{font-size:16px}section{padding:48px 0}.hero{min-height:70vh}}
+@media (max-width:560px){body{font-size:16px}section{padding:46px 0}.cpt-body{padding:22px 20px 24px}
+  .meta div{border-right:none;border-bottom:1px solid var(--edge);padding-right:0}
+  .meta div:last-child{border-bottom:none}}
 </style>
 
 <header class="hero">
@@ -138,13 +148,12 @@ footer{padding:56px 0 80px;text-align:center;color:var(--veil-faint);font-family
   <div class="hero-floor"></div>
   <div class="hero-inner">
     <div class="wrap">
-      <p class="eyebrow">10-Second Seamless Loop · Visualizer Concept · v1</p>
-      <h1>The Veil<br>Burns</h1>
-      <p class="sub">Fire is not what destroys the world here. Fire is what burns away the thing that was covering your eye.</p>
+      <p class="eyebrow">Concept v2 · Revised against the lyrics · 4 directions</p>
+      <h1>Phoenix<br>Hour</h1>
+      <p class="sub">The world is ending and they are completely at peace. That contradiction is the whole visual.</p>
       <p class="credits">
         <b>BURN</b> — SWITCH O × THE VISION<br>
-        <i>Blind But Now I See</i> · The Vision Records &amp; 3rd Eye Entertainment<br>
-        Released 2022-07-15 · 3:22
+        <i>Blind But Now I See</i> · 3rd Eye Entertainment · 3:22
       </p>
     </div>
   </div>
@@ -152,169 +161,572 @@ footer{padding:56px 0 80px;text-align:center;color:var(--veil-faint);font-family
 
 <section>
   <div class="wrap">
-    <div class="callout">
-      <span class="tag">Status — read first</span>
-      <p><strong>The audio is blocked; the visuals are not.</strong> This is a <code>Vision - Topic</code> auto-upload — there is no video, just the cover art over audio. I inspected that art directly at full resolution, and it is the source of the palette and framing below. <em class="key">Nothing visual is missing.</em></p>
-      <p>What I could not do is <strong>hear the track</strong> — YouTube's bot-guard refuses media playback from this datacenter IP, across nine player clients, four mirrors, and both proxy paths. There are no lyrics for this release anywhere online.</p>
-      <p>So everything here is built on verified evidence — release metadata, the cover art, your five references — and <strong>not</strong> on hearing the song. The look, the loop engineering, and the prompts are solid and lyric-independent. Two things need you: the <strong>setting</strong> (§6, variation D) and the <strong>tempo</strong> (§3).</p>
-    </div>
-  </div>
-</section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>What the Lyrics Changed</h2></div>
+    <p class="sec-sub">The core idea survived. The tone did not.</p>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><h2>The Idea</h2></div>
-    <p class="sec-sub">Why this isn't just "a world on fire"</p>
+    <p>Thank you — these resolved almost everything. Two things held, three things changed, and one of the changes is big.</p>
 
-    <p>You suggested a burning world. I want to keep the fire but <strong>invert its meaning</strong> — because a straight apocalypse would actually fight this record's own thesis. Three pieces of evidence point the same way:</p>
+    <h3>✅ Held — the revelation thesis</h3>
+    <p>My v1 read was that fire here means <em class="key">clarity, not catastrophe</em> — the veil burning away. The lyrics confirm it outright: getting the vision clear, being wide awake, seeing the gold from a mile off. The album title wasn't decoration. <strong>Keep the whole thematic spine.</strong></p>
 
-    <div class="scroll"><table>
-      <thead><tr><th>Evidence</th><th>What it tells us</th></tr></thead>
-      <tbody>
-        <tr><td><i>Blind But Now I See</i></td><td>The "Amazing Grace" line. Revelation — sight arriving after darkness.</td></tr>
-        <tr><td>3rd Eye Entertainment</td><td>Inner sight. Perception beyond the literal.</td></tr>
-        <tr><td>The cover art</td><td>A colossal eye in a cave mouth; two tiny figures dwarfed, looking <em class="key">up</em> at it.</td></tr>
-      </tbody>
-    </table></div>
-
-    <p>The record isn't about destruction. It's about <strong>seeing</strong>. Which gives us the bridge:</p>
+    <h3>✅ Held — the two figures</h3>
+    <p>I guessed the cover's pair mattered. They do — there's an entire passage about not needing to speak, about understanding each other by frequency. <strong>The pair is the emotional centre of the song</strong>, not set dressing.</p>
 
     <div class="thesis">
-      <p>The veil combusts. The smoke clears. And what's behind it has been watching the whole time.</p>
-      <p>That reading uses every image you wanted — a burning world, ash, embers, ruin — while landing exactly on <i>blind, but now I see</i>. Burning and seeing become the same gesture. It also gives the loop a reason to be a loop: revelation that never completes, a veil forever burning and forever re-forming.</p>
+      <p>But the hook isn't awe. It's an invitation. <i>Let's watch</i> — calm, shared, unbothered.</p>
+      <p>My v1 staged two tiny figures dwarfed and reverent before something enormous. That's the wrong emotion. They aren't overwhelmed by the burning world — they're <strong>completely relaxed in front of it</strong>. It's closer to two people on a balcony at sunset who happen to be watching the end of everything, and are enjoying each other's company more than they're worried about it.</p>
+    </div>
+
+    <h3>⚠ Changed — the setting is Mediterranean, not a cave</h3>
+    <p>There's a verse about roasting in Spain and longing for rain. That's a specific, warm, <strong>dry, sun-scorched</strong> world — terracotta, olive trees, white stucco, hard light — and rain as the absent, longed-for thing. My cave was atmospheric but generic. <em class="key">This is the single biggest correction: golden hour on a dry southern hillside, not a cave mouth.</em></p>
+
+    <h3>⚠ Changed — the phoenix is explicit, so it should lead</h3>
+    <p>There's a direct line about rising through the ashes like a phoenix. I had embers rising purely as a loop device; the lyrics promote it to <strong>the song's central image</strong>. The ember column stops being texture and becomes the subject — see Direction D.</p>
+
+    <h3>⚠ Changed — there's melancholy under the calm</h3>
+    <p>The serenity isn't uncomplicated. There's drinking to numb pain, pain that's still there and visible, and someone being thought about who isn't present. So the frame wants <strong>one small grounding human detail</strong> — a glass, a bottle, an empty chair — to keep it from floating off into the purely cosmic.</p>
+
+    <h3>The valley-vs-city question — answered</h3>
+    <p>Neither, as it turns out. Not a wilderness valley, not a hip-hop city skyline. <strong>A warm Mediterranean town seen from above, at golden hour, burning quietly in the distance.</strong> The lyrics picked a third option I hadn't offered.</p>
+
+    <div class="callout teal">
+      <span class="tag">A note on the eye</span>
+      <p>The giant eye came from the <em>album cover and the label's name</em> — not from this song. The lyrics are about the narrator's <strong>own</strong> clear sight, not about being watched by something. So I've demoted it from mandatory to <strong>optional overlay</strong>: it works beautifully as a faint shape in the clouds or as the sun itself (Directions A and C), keeping continuity with the release without contradicting the words. <em class="key">Your call whether it stays.</em></p>
+    </div>
+
+    <h3>Revised palette</h3>
+    <p>The album's coral and teal are kept — but warmed toward Spain, with terracotta and a low sun added.</p>
+    <div class="pal">
+      <div class="sw" style="background:#FFD79A;color:#3A2A0E"><span class="nm">Low Sun</span><span>#FFD79A</span><span class="rl">Golden hour key</span></div>
+      <div class="sw" style="background:#FFB25C;color:#33200A"><span class="nm">Ember Gold</span><span>#FFB25C</span><span class="rl">Fire cores · rim</span></div>
+      <div class="sw" style="background:#F0785A;color:#2B1109"><span class="nm">Ember Coral</span><span>#F0785A</span><span class="rl">Album accent</span></div>
+      <div class="sw" style="background:#B4553C;color:#26100A"><span class="nm">Terracotta</span><span>#B4553C</span><span class="rl">Rooftops · earth</span></div>
+      <div class="sw" style="background:#8B9A4B;color:#1D220C"><span class="nm">Dry Olive</span><span>#8B9A4B</span><span class="rl">Scrub · trees</span></div>
+      <div class="sw" style="background:#3E7C7B;color:#08201F"><span class="nm">Iris Teal</span><span>#3E7C7B</span><span class="rl">Album accent</span></div>
+      <div class="sw" style="background:#21454A;color:#C6D8DA"><span class="nm">Deep Teal</span><span>#21454A</span><span class="rl">Upper sky</span></div>
+      <div class="sw" style="background:#C6BCD2;color:#241D2B"><span class="nm">Ash Lavender</span><span>#C6BCD2</span><span class="rl">Ash · haze</span></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2>The Shot</h2></div>
-    <p class="sec-sub">One frame, alive — the album cover set in motion</p>
+  <div class="wide">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Four Directions</h2></div>
+    <p class="sec-sub">Rendered mockups — composition, palette and framing. Each has a paste-ready image prompt.</p>
 
-    <p>We are <strong>inside the mouth of a cave, looking out</strong> — the exact vantage of the cover.</p>
-
-    <h3>Foreground · the frame</h3>
-    <p>The cave's jagged near-black silhouette wraps the top and both sides — a natural, organic vignette. Wet rock, a few hanging roots stirring in the updraft. <em class="key">This frame is doing double duty: it is also our best loop-concealment device.</em></p>
-
-    <h3>Midground · the witnesses</h3>
-    <p>A moss-covered outcrop. <strong>Two small hooded figures</strong> stand on it in silhouette, backs to us, facing out and up. Their jackets ripple in the heat. They do not walk, turn, or gesture — they stand and witness.</p>
-
-    <h3>Background · the burning</h3>
-    <p>Far below and beyond, a vast valley burns. Not a wall of flame — slow <strong>veins of orange fire</strong> tracing the ridgelines like molten circuitry, seen from miles away. Lazy smoke columns rise and lean.</p>
-
-    <h3>The sky · the eye</h3>
-    <p>Filling it, impossibly large: <strong>a single human eye</strong>, coral sclera, glacial-teal iris, looking down at the two figures. It is lit from <em class="key">below</em>, by the fire.</p>
-
-    <h3>The air between</h3>
-    <p>Two crossing particle streams — <strong>embers rising</strong> from the valley, <strong>ash falling</strong> from above. They pass through each other. This counter-motion is the scene's heartbeat and the engine of the loop.</p>
-
-    <h3>Palette — sampled from the cover</h3>
-    <p>Taken directly off the artwork, so the visualizer reads as the same release rather than a separate piece.</p>
-    <div class="pal">
-      <div class="sw" style="background:#F0785A;color:#2B1109"><span class="nm">Ember Coral</span><span>#F0785A</span><span class="rl">Sclera · warm key</span></div>
-      <div class="sw" style="background:#FFB25C;color:#33200A"><span class="nm">Ember Gold</span><span>#FFB25C</span><span class="rl">Fire cores · rim light</span></div>
-      <div class="sw" style="background:#3E7C7B;color:#08201F"><span class="nm">Iris Teal</span><span>#3E7C7B</span><span class="rl">The iris</span></div>
-      <div class="sw" style="background:#21454A;color:#C6D8DA"><span class="nm">Deep Teal</span><span>#21454A</span><span class="rl">Cool shadow · depth</span></div>
-      <div class="sw" style="background:#8B9A4B;color:#1D220C"><span class="nm">Moss Olive</span><span>#8B9A4B</span><span class="rl">Lit rock · moss</span></div>
-      <div class="sw" style="background:#C6BCD2;color:#241D2B"><span class="nm">Veil Lavender</span><span>#C6BCD2</span><span class="rl">Haze · pale sky</span></div>
-      <div class="sw" style="background:#1E1813;color:#A79C93;border:1px solid #33291F"><span class="nm">Cave Bitumen</span><span>#1E1813</span><span class="rl">Silhouette frame</span></div>
+    <div class="callout gold">
+      <span class="tag">About these images</span>
+      <p>I drew these <strong>myself, in vector</strong>, so you can see the four ideas right now. They are accurate to composition, palette, staging and light — they are <em>not</em> photoreal renders. Higgsfield is connected to your org but <strong>switched off for this chat</strong>, so I couldn't call it. Flip it on in this chat's connector settings and I'll generate the photoreal versions from the prompts below. See §05.</p>
     </div>
 
-    <h3>Lighting — the whole look in one opposition</h3>
-    <p><strong>From below, fire:</strong> coral and gold, uplighting the underside of the rocks, the figures' legs and shoulders, the bellies of the smoke. Flickering.<br>
-    <strong>From above, the eye:</strong> cool lavender-teal, soft and constant, rimming the cave lip and the tops of their hoods.<br>
-    Volumetric god rays cut down through the smoke where the two meet.</p>
-    <p>Two figures caught precisely between fire below and sight above — <em class="key">that is the song's thesis, rendered as lighting.</em></p>
+    <div class="concepts">
+
+      <!-- ═══════════ A ═══════════ -->
+      <article class="cpt pick">
+        <svg class="cpt-art" viewBox="0 0 800 450" role="img" aria-label="Concept A: two figures sit close together on a rooftop parapet at golden hour, looking out over a Mediterranean town burning far below, with ash falling and embers rising.">
+          <defs>
+            <linearGradient id="aSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#21454A"/><stop offset=".38" stop-color="#6E6270"/>
+              <stop offset=".68" stop-color="#D98E7A"/><stop offset="1" stop-color="#FFD79A"/>
+            </linearGradient>
+            <radialGradient id="aSun" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#FFD79A" stop-opacity=".85"/>
+              <stop offset=".45" stop-color="#F0785A" stop-opacity=".28"/>
+              <stop offset="1" stop-color="#F0785A" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="aFire" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFB25C" stop-opacity=".55"/><stop offset="1" stop-color="#F0785A" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="aFore" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2A1710"/><stop offset="1" stop-color="#160C08"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#aSky)"/>
+          <circle cx="560" cy="292" r="175" fill="url(#aSun)"/>
+          <circle cx="560" cy="292" r="27" fill="#FFE7BE"/>
+          <!-- distant ranges -->
+          <path d="M0 268 L120 240 L215 262 L330 232 L430 258 L520 240 L640 264 L740 246 L800 262 L800 300 L0 300 Z" fill="#5E5566" opacity=".55"/>
+          <path d="M0 285 L110 264 L230 284 L340 262 L470 286 L590 266 L700 288 L800 274 L800 320 L0 320 Z" fill="#4A3F4C" opacity=".7"/>
+          <!-- smoke columns -->
+          <g fill="#C6BCD2" opacity=".17">
+            <path d="M198 300 C186 258 210 232 200 196 C224 230 212 262 226 300 Z"/>
+            <path d="M392 302 C378 252 404 224 392 182 C420 222 406 258 422 302 Z"/>
+            <path d="M628 300 C618 262 638 240 630 208 C652 238 640 266 652 300 Z"/>
+          </g>
+          <!-- burning town -->
+          <path d="M0 306 L46 306 L46 296 L74 296 L74 308 L120 308 L120 294 L152 294 L152 310 L206 310 L206 298 L238 298 L238 306 L296 306 L296 292 L326 292 L326 308 L378 308 L378 300 L410 300 L410 310 L470 310 L470 296 L500 296 L500 306 L556 306 L556 300 L590 300 L590 310 L648 310 L648 298 L678 298 L678 308 L730 308 L730 300 L768 300 L768 308 L800 308 L800 346 L0 346 Z" fill="#2E1F1D"/>
+          <rect y="300" width="800" height="50" fill="url(#aFire)"/>
+          <g fill="#FFB25C">
+            <rect class="flick" x="58" y="312" width="7" height="4"/><rect class="flick2" x="132" y="316" width="9" height="4"/>
+            <rect class="flick" x="218" y="314" width="6" height="4"/><rect class="flick2" x="306" y="310" width="10" height="5"/>
+            <rect class="flick" x="392" y="318" width="7" height="4"/><rect class="flick2" x="482" y="312" width="8" height="4"/>
+            <rect class="flick" x="566" y="316" width="9" height="4"/><rect class="flick2" x="662" y="313" width="7" height="4"/>
+            <rect class="flick" x="742" y="317" width="8" height="4"/>
+          </g>
+          <g fill="#F0785A" opacity=".85">
+            <rect x="96" y="322" width="5" height="3"/><rect x="256" y="326" width="6" height="3"/>
+            <rect x="438" y="324" width="5" height="3"/><rect x="612" y="327" width="6" height="3"/><rect x="704" y="322" width="5" height="3"/>
+          </g>
+          <!-- haze -->
+          <rect y="298" width="800" height="56" fill="#D98E7A" opacity=".2"/>
+          <!-- birds -->
+          <g stroke="#3A2C2A" stroke-width="1.6" fill="none" opacity=".6">
+            <path d="M120 168 q5 -4 10 0"/><path d="M136 158 q5 -4 10 0"/><path d="M150 174 q5 -4 10 0"/>
+            <path d="M690 142 q5 -4 10 0"/><path d="M706 152 q5 -4 10 0"/>
+          </g>
+          <!-- terrace -->
+          <rect y="368" width="800" height="82" fill="url(#aFore)"/>
+          <rect y="362" width="800" height="8" fill="#3E2419"/>
+          <!-- figures -->
+          <g fill="#140D0A">
+            <path d="M286 362 q0 -26 15 -26 q16 0 16 26 Z"/>
+            <circle cx="301" cy="330" r="10.5"/>
+            <path d="M322 362 q-2 -25 14 -26 q16 -1 17 26 Z"/>
+            <circle cx="338" cy="333" r="10"/>
+          </g>
+          <g fill="#FFB25C" opacity=".5">
+            <path d="M291 330 a10.5 10.5 0 0 1 5 -8 l2 3 a8 8 0 0 0 -4 6 Z"/>
+            <path d="M329 333 a10 10 0 0 1 5 -8 l2 3 a8 8 0 0 0 -4 6 Z"/>
+          </g>
+          <!-- glass + bottle -->
+          <rect x="386" y="350" width="7" height="12" fill="#241713"/>
+          <rect x="386" y="356" width="7" height="6" fill="#B4553C" opacity=".8"/>
+          <path d="M404 362 l0 -14 q0 -4 3 -6 l0 -5 l4 0 l0 5 q3 2 3 6 l0 14 Z" fill="#1C120F"/>
+          <!-- ash + embers -->
+          <g fill="#C6BCD2" opacity=".55">
+            <circle cx="70" cy="96" r="1.6"/><circle cx="168" cy="52" r="1.2"/><circle cx="244" cy="128" r="1.7"/>
+            <circle cx="352" cy="72" r="1.3"/><circle cx="452" cy="140" r="1.6"/><circle cx="536" cy="60" r="1.2"/>
+            <circle cx="618" cy="120" r="1.7"/><circle cx="722" cy="84" r="1.4"/><circle cx="112" cy="196" r="1.5"/>
+            <circle cx="300" cy="212" r="1.3"/><circle cx="486" cy="192" r="1.5"/><circle cx="668" cy="208" r="1.3"/>
+            <circle cx="212" cy="270" r="1.2"/><circle cx="742" cy="256" r="1.4"/><circle cx="404" cy="248" r="1.2"/>
+          </g>
+          <g fill="#FFB25C">
+            <circle cx="130" cy="286" r="1.8" opacity=".9"/><circle cx="262" cy="252" r="1.5" opacity=".75"/>
+            <circle cx="348" cy="290" r="1.9" opacity=".85"/><circle cx="470" cy="262" r="1.6" opacity=".8"/>
+            <circle cx="596" cy="284" r="1.8" opacity=".9"/><circle cx="694" cy="246" r="1.4" opacity=".7"/>
+            <circle cx="176" cy="222" r="1.3" opacity=".6"/><circle cx="518" cy="216" r="1.4" opacity=".65"/>
+            <circle cx="404" cy="186" r="1.2" opacity=".5"/><circle cx="628" cy="176" r="1.1" opacity=".45"/>
+          </g>
+        </svg>
+        <div class="cpt-body">
+          <span class="cpt-tag">Direction A · Recommended primary</span>
+          <h4>Phoenix Hour<small>The hook, staged literally — two people watching it burn, together, at ease</small></h4>
+          <p>Golden hour on a rooftop terrace, high on a dry hillside. The two sit <strong>close together on the parapet</strong>, backs to us, legs over the edge — relaxed, not reverent. A glass and a bottle beside them. Far below, a Mediterranean town burns quietly: fire in the windows, three lazy smoke columns, no drama. Ash drifts down like slow snow; embers climb past them. Birds circle high and continuous.</p>
+          <p>The low sun sits right in frame — and if you want to keep the album's motif, <em class="key">the sun is the eye</em>, its disc faintly irised. Continuity without contradicting the words.</p>
+          <div class="meta">
+            <div><span>Lyric anchor</span><p>The hook's invitation to watch together; the passage about needing no words.</p></div>
+            <div><span>Loop engine</span><p>Ash fall + ember rise at constant density; smoke drift; one 10s sun-shimmer cycle.</p></div>
+            <div><span>Risk</span><p>Lowest of the four. No moving subject, no event. Very safe to generate.</p></div>
+          </div>
+          <div class="prompt">
+            <div class="prompt-bar"><span>Image prompt — A</span><span class="cnt">16:9 keyframe</span></div>
+            <pre>Painterly cinematic wide shot at golden hour, viewed from a terracotta rooftop
+terrace high on a dry Mediterranean hillside. Two figures sit close together on
+the stone parapet in silhouette, backs to camera, legs hanging over the edge,
+relaxed and at ease, shoulders almost touching. A glass and a wine bottle stand
+on the parapet beside them.
+
+Far below and beyond: a whitewashed coastal town burning quietly — small fires
+glowing in the windows, three lazy columns of smoke leaning in the warm air. Dry
+olive scrub and cypress on the hillsides. Hazy mountain ranges receding into
+dusty rose distance.
+
+A huge low sun sits just above the horizon, washing everything in amber. Fine
+grey ash falls slowly like snow; glowing embers drift upward from the town
+below; the two streams cross. Distant birds circle high in the sky.
+
+Palette: amber and terracotta warmth against deep teal upper sky, dusty rose
+haze, olive green scrub, pale lavender ash.
+Style: painterly retro-futurist matte painting, muted desaturated mid-tones with
+warm highlights, 35mm anamorphic, film grain, gentle halation around the sun.
+Calm, serene, unhurried — beautiful rather than frightening.</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- ═══════════ B ═══════════ -->
+      <article class="cpt">
+        <svg class="cpt-art" viewBox="0 0 800 450" role="img" aria-label="Concept B: an intimate terrace table among olive trees with ash settling on everything like snow, the burning world only a distant glow.">
+          <defs>
+            <linearGradient id="bSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2C3A44"/><stop offset=".5" stop-color="#7A6A6A"/><stop offset="1" stop-color="#C98F6E"/>
+            </linearGradient>
+            <linearGradient id="bGlow" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F0785A" stop-opacity="0"/><stop offset="1" stop-color="#FFB25C" stop-opacity=".5"/>
+            </linearGradient>
+            <linearGradient id="bFloor" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#3B2A22"/><stop offset="1" stop-color="#1A100C"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#bSky)"/>
+          <rect y="210" width="800" height="120" fill="url(#bGlow)"/>
+          <!-- distant burning horizon -->
+          <path d="M0 300 L90 292 L180 302 L280 288 L390 300 L500 290 L610 302 L720 292 L800 300 L800 330 L0 330 Z" fill="#3A2622" opacity=".9"/>
+          <g fill="#FFB25C" opacity=".8">
+            <rect class="flick" x="120" y="298" width="14" height="3"/><rect class="flick2" x="320" y="294" width="18" height="3"/>
+            <rect class="flick" x="530" y="297" width="15" height="3"/><rect class="flick2" x="690" y="296" width="12" height="3"/>
+          </g>
+          <!-- smoke haze -->
+          <g fill="#C6BCD2" opacity=".14">
+            <path d="M100 300 C88 250 116 224 104 186 C132 224 118 258 132 300 Z"/>
+            <path d="M560 300 C548 256 574 230 562 196 C592 232 576 264 590 300 Z"/>
+          </g>
+          <!-- olive trees -->
+          <g>
+            <path d="M96 330 l6 -46 l6 46 Z" fill="#2A1F16"/>
+            <ellipse cx="102" cy="272" rx="46" ry="30" fill="#5C6B36"/>
+            <ellipse cx="86" cy="264" rx="26" ry="18" fill="#6E7E42" opacity=".8"/>
+            <path d="M690 330 l7 -54 l7 54 Z" fill="#2A1F16"/>
+            <ellipse cx="697" cy="264" rx="52" ry="34" fill="#55632F"/>
+            <ellipse cx="716" cy="256" rx="28" ry="19" fill="#6E7E42" opacity=".75"/>
+            <path d="M400 330 l5 -34 l5 34 Z" fill="#2A1F16"/>
+            <ellipse cx="405" cy="288" rx="34" ry="22" fill="#4E5B2C" opacity=".85"/>
+          </g>
+          <!-- terrace floor -->
+          <rect y="326" width="800" height="124" fill="url(#bFloor)"/>
+          <g stroke="#48332A" stroke-width="1.2" opacity=".55">
+            <path d="M0 356 H800"/><path d="M0 392 H800"/><path d="M0 430 H800"/>
+            <path d="M150 326 V450"/><path d="M340 326 V450"/><path d="M520 326 V450"/><path d="M690 326 V450"/>
+          </g>
+          <!-- table -->
+          <ellipse cx="400" cy="368" rx="132" ry="30" fill="#5A3A2A"/>
+          <ellipse cx="400" cy="364" rx="132" ry="30" fill="#7A5138"/>
+          <ellipse cx="400" cy="360" rx="132" ry="30" fill="#C6BCD2" opacity=".26"/>
+          <rect x="392" y="386" width="16" height="52" fill="#3A241A"/>
+          <ellipse cx="400" cy="440" rx="52" ry="12" fill="#2C1A13"/>
+          <!-- two chairs, one empty -->
+          <g fill="#2A1A13">
+            <rect x="216" y="330" width="9" height="86"/><rect x="286" y="330" width="9" height="86"/>
+            <rect x="210" y="326" width="92" height="9"/>
+            <rect x="505" y="330" width="9" height="86"/><rect x="575" y="330" width="9" height="86"/>
+            <rect x="499" y="326" width="92" height="9"/>
+          </g>
+          <!-- ash on chair backs and table -->
+          <g fill="#C6BCD2" opacity=".4">
+            <rect x="210" y="324" width="92" height="3"/><rect x="499" y="324" width="92" height="3"/>
+          </g>
+          <!-- glass + bottle on table -->
+          <path d="M352 358 l0 -20 q0 -5 4 -8 l0 -7 l5 0 l0 7 q4 3 4 8 l0 20 Z" fill="#26160F"/>
+          <path d="M352 348 l13 0 l0 10 l-13 0 Z" fill="#B4553C" opacity=".85"/>
+          <rect x="428" y="342" width="11" height="18" fill="#2A1A12"/>
+          <rect x="428" y="351" width="11" height="9" fill="#C0603F" opacity=".8"/>
+          <ellipse cx="433.5" cy="342" rx="5.5" ry="2" fill="#C6BCD2" opacity=".5"/>
+          <!-- falling ash, heavy -->
+          <g fill="#C6BCD2">
+            <circle cx="58" cy="72" r="2.1" opacity=".6"/><circle cx="146" cy="128" r="1.7" opacity=".5"/>
+            <circle cx="228" cy="60" r="2" opacity=".55"/><circle cx="312" cy="146" r="1.8" opacity=".5"/>
+            <circle cx="392" cy="88" r="2.2" opacity=".6"/><circle cx="474" cy="158" r="1.6" opacity=".45"/>
+            <circle cx="556" cy="74" r="2" opacity=".55"/><circle cx="638" cy="134" r="1.9" opacity=".5"/>
+            <circle cx="726" cy="66" r="2.1" opacity=".6"/><circle cx="96" cy="206" r="1.8" opacity=".5"/>
+            <circle cx="270" cy="220" r="2" opacity=".5"/><circle cx="452" cy="204" r="1.7" opacity=".45"/>
+            <circle cx="614" cy="228" r="1.9" opacity=".5"/><circle cx="762" cy="196" r="1.6" opacity=".45"/>
+            <circle cx="180" cy="270" r="1.7" opacity=".4"/><circle cx="500" cy="262" r="1.8" opacity=".4"/>
+            <circle cx="340" cy="306" r="1.6" opacity=".35"/><circle cx="660" cy="300" r="1.5" opacity=".35"/>
+          </g>
+        </svg>
+        <div class="cpt-body">
+          <span class="cpt-tag">Direction B · The quiet one</span>
+          <h4>The Ash Garden<small>Catastrophe as weather — ash falling like snow on an ordinary evening</small></h4>
+          <p>The most intimate and the most human. A terrace table among olive trees. <strong>Ash settling on everything like snowfall</strong> — on the chair backs, the tabletop, the rim of the glass. The burning world is only a warm glow along the horizon and two columns of smoke. Nobody is watching a spectacle; they've simply stopped reacting to it.</p>
+          <p>This is the direction that lands <em class="key">not entertaining draining thoughts</em>. It also has an empty second chair — the person being thought about, absent — if you want the melancholy on the surface. Put the figures in the chairs instead if you'd rather it stay warm.</p>
+          <div class="meta">
+            <div><span>Lyric anchor</span><p>Refusing to entertain the draining thoughts; the drink; the absent someone.</p></div>
+            <div><span>Loop engine</span><p>Heavy constant ash fall; slow olive-leaf sway on a 5s cycle; horizon flicker.</p></div>
+            <div><span>Risk</span><p>Very low. Almost nothing moves — the most reliably loopable of the four.</p></div>
+          </div>
+          <div class="prompt">
+            <div class="prompt-bar"><span>Image prompt — B</span><span class="cnt">16:9 keyframe</span></div>
+            <pre>Painterly cinematic shot of a quiet Mediterranean terrace at dusk, tiled stone
+floor, two empty wooden chairs facing each other across a small round table.
+On the table: a half-full glass of red wine and an open bottle.
+
+Fine grey ash is falling steadily like snow and has settled in a soft layer over
+everything — the chair backs, the tabletop, the rim of the glass, the tiles.
+Gnarled olive trees with dusty silver-green leaves stand around the terrace.
+
+Along the far horizon, low and distant, the world is burning: a warm orange glow
+and two lazy columns of smoke rising into a deep teal evening sky. It is calm,
+quiet, unhurried — nobody is reacting to it.
+
+Palette: warm terracotta and amber glow along the horizon, deep teal upper sky,
+dusty olive green, pale lavender-grey ash over everything.
+Style: painterly retro-futurist matte painting, muted desaturated mid-tones,
+35mm anamorphic, film grain, soft haze. Melancholy but peaceful.</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- ═══════════ C ═══════════ -->
+      <article class="cpt">
+        <svg class="cpt-art" viewBox="0 0 800 450" role="img" aria-label="Concept C: two seated silhouettes with concentric resonance rings radiating between them across a burning horizon, a graphic retro-futurist treatment.">
+          <defs>
+            <linearGradient id="cSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#141B26"/><stop offset=".55" stop-color="#3E4A55"/><stop offset="1" stop-color="#8E5A4C"/>
+            </linearGradient>
+            <radialGradient id="cCore" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#FFD79A" stop-opacity=".9"/>
+              <stop offset=".5" stop-color="#F0785A" stop-opacity=".22"/>
+              <stop offset="1" stop-color="#F0785A" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#cSky)"/>
+          <!-- matrix grid -->
+          <g stroke="#3E7C7B" stroke-width=".7" opacity=".28">
+            <path d="M0 348 H800"/><path d="M0 372 H800"/><path d="M0 400 H800"/><path d="M0 432 H800"/>
+            <path d="M400 336 L120 450"/><path d="M400 336 L250 450"/><path d="M400 336 L400 450"/>
+            <path d="M400 336 L550 450"/><path d="M400 336 L680 450"/>
+          </g>
+          <!-- resonance rings -->
+          <g fill="none" stroke="#3E7C7B">
+            <ellipse cx="400" cy="300" rx="60" ry="22" stroke-width="1.8" opacity=".85"/>
+            <ellipse cx="400" cy="300" rx="118" ry="42" stroke-width="1.5" opacity=".62"/>
+            <ellipse cx="400" cy="300" rx="182" ry="64" stroke-width="1.3" opacity=".45"/>
+            <ellipse cx="400" cy="300" rx="252" ry="88" stroke-width="1.1" opacity=".3"/>
+            <ellipse cx="400" cy="300" rx="330" ry="114" stroke-width="1" opacity=".18"/>
+            <ellipse cx="400" cy="300" rx="410" ry="142" stroke-width="1" opacity=".1"/>
+          </g>
+          <g fill="none" stroke="#FFB25C">
+            <ellipse cx="400" cy="300" rx="88" ry="32" stroke-width="1.2" opacity=".5"/>
+            <ellipse cx="400" cy="300" rx="216" ry="76" stroke-width="1" opacity=".26"/>
+          </g>
+          <circle cx="400" cy="300" r="150" fill="url(#cCore)"/>
+          <!-- burning horizon band -->
+          <rect y="296" width="800" height="9" fill="#F0785A" opacity=".55"/>
+          <rect y="290" width="800" height="6" fill="#FFB25C" opacity=".35"/>
+          <g fill="#FFD79A" opacity=".9">
+            <rect class="flick" x="150" y="294" width="26" height="4"/><rect class="flick2" x="330" y="294" width="34" height="4"/>
+            <rect class="flick" x="520" y="294" width="28" height="4"/><rect class="flick2" x="672" y="294" width="22" height="4"/>
+          </g>
+          <!-- silhouette ridge -->
+          <path d="M0 300 L110 288 L210 300 L330 286 L470 300 L590 288 L700 300 L800 292 L800 340 L0 340 Z" fill="#150F14"/>
+          <!-- seated figures -->
+          <g fill="#0C0910">
+            <path d="M310 336 q-2 -30 17 -30 q19 0 18 30 Z"/>
+            <circle cx="327" cy="298" r="12"/>
+            <path d="M452 336 q-1 -30 18 -30 q19 0 17 30 Z"/>
+            <circle cx="470" cy="298" r="12"/>
+            <rect x="344" y="326" width="112" height="7" rx="3"/>
+          </g>
+          <g fill="#FFB25C" opacity=".55">
+            <path d="M339 298 a12 12 0 0 0 -6 -9 l-2 3 a9 9 0 0 1 5 7 Z"/>
+            <path d="M458 298 a12 12 0 0 1 6 -9 l2 3 a9 9 0 0 0 -5 7 Z"/>
+          </g>
+          <!-- foreground plinth -->
+          <rect y="336" width="800" height="114" fill="#0E0A0C"/>
+          <!-- ash + embers -->
+          <g fill="#C6BCD2" opacity=".5">
+            <circle cx="84" cy="80" r="1.6"/><circle cx="196" cy="140" r="1.3"/><circle cx="292" cy="66" r="1.5"/>
+            <circle cx="512" cy="72" r="1.4"/><circle cx="624" cy="138" r="1.6"/><circle cx="726" cy="88" r="1.3"/>
+            <circle cx="140" cy="212" r="1.4"/><circle cx="672" cy="204" r="1.3"/>
+          </g>
+          <g fill="#FFB25C">
+            <circle cx="180" cy="266" r="1.7" opacity=".8"/><circle cx="286" cy="244" r="1.4" opacity=".65"/>
+            <circle cx="536" cy="250" r="1.6" opacity=".7"/><circle cx="648" cy="270" r="1.5" opacity=".75"/>
+            <circle cx="404" cy="222" r="1.3" opacity=".55"/><circle cx="112" cy="240" r="1.3" opacity=".6"/>
+          </g>
+        </svg>
+        <div class="cpt-body">
+          <span class="cpt-tag">Direction C · The graphic one</span>
+          <h4>Frequencies<small>Wordless understanding, drawn — resonance rings between two silhouettes</small></h4>
+          <p>The most designed and the most abstract, closest to VISUALDON's graphic side. The two sit on a bench in hard silhouette against a burning horizon reduced to a <strong>pure band of light</strong>. Between and around them, concentric resonance rings pulse outward across a faint perspective grid.</p>
+          <p>Two lyrics converge here and justify every element: the mind described as <em class="key">a matrix</em> gives the grid, and understanding each other <em class="key">by frequency</em> gives the rings. Nothing is decorative. And the outward-pulsing ring is a <strong>flawless loop primitive</strong> — a wave with a fixed period simply never has a seam.</p>
+          <div class="meta">
+            <div><span>Lyric anchor</span><p>The matrix-mind image and the frequencies line, drawn literally.</p></div>
+            <div><span>Loop engine</span><p>Rings emit at a fixed 2.0s period, ×5 per loop. Mathematically seamless.</p></div>
+            <div><span>Risk</span><p>Coldest of the four. Furthest from the album cover's world.</p></div>
+          </div>
+          <div class="prompt">
+            <div class="prompt-bar"><span>Image prompt — C</span><span class="cnt">16:9 keyframe</span></div>
+            <pre>Graphic retro-futurist illustration, minimal and geometric. Two figures sit
+side by side on a low bench in hard black silhouette, backs to camera, seen from
+behind, shoulders close together.
+
+Before them the horizon is reduced to a single glowing band of orange and gold
+light — a burning world abstracted into pure graphic form — above a black
+silhouetted ridge.
+
+Radiating outward from the point between the two figures: large concentric
+elliptical resonance rings in teal and amber, like a sound wave or ripple seen
+in perspective, receding toward the horizon. Beneath them a faint teal
+perspective grid recedes to a vanishing point.
+
+Deep midnight blue-teal sky above, warming to rust at the horizon. Sparse
+embers and fine ash drift through the air.
+
+Palette: deep teal and midnight blue, glowing amber and coral horizon, pale
+lavender ash.
+Style: flat graphic vector poster aesthetic with painterly grain, high contrast,
+retro-futurist, muted and restrained. Hypnotic, meditative, symmetrical.</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- ═══════════ D ═══════════ -->
+      <article class="cpt">
+        <svg class="cpt-art" viewBox="0 0 800 450" role="img" aria-label="Concept D: a towering column of rising embers whose apex momentarily suggests a bird's outspread wings, with two small figures watching from below.">
+          <defs>
+            <linearGradient id="dSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#12161F"/><stop offset=".45" stop-color="#453040"/>
+              <stop offset=".78" stop-color="#96513C"/><stop offset="1" stop-color="#D9853F"/>
+            </linearGradient>
+            <radialGradient id="dBurst" cx=".5" cy=".5" r=".5">
+              <stop offset="0" stop-color="#FFD79A" stop-opacity=".55"/>
+              <stop offset=".55" stop-color="#F0785A" stop-opacity=".18"/>
+              <stop offset="1" stop-color="#F0785A" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="dCol" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0" stop-color="#FFB25C" stop-opacity=".45"/><stop offset="1" stop-color="#F0785A" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#dSky)"/>
+          <circle cx="400" cy="168" r="215" fill="url(#dBurst)"/>
+          <path d="M330 420 L400 150 L470 420 Z" fill="url(#dCol)"/>
+          <!-- wing suggestion, formed of embers -->
+          <g fill="#FFB25C">
+            <circle cx="400" cy="140" r="4.5"/><circle cx="400" cy="158" r="3.6"/><circle cx="400" cy="176" r="3"/>
+            <circle cx="382" cy="150" r="3.4"/><circle cx="418" cy="150" r="3.4"/>
+            <circle cx="364" cy="146" r="3.1" opacity=".95"/><circle cx="436" cy="146" r="3.1" opacity=".95"/>
+            <circle cx="344" cy="138" r="2.9" opacity=".9"/><circle cx="456" cy="138" r="2.9" opacity=".9"/>
+            <circle cx="322" cy="128" r="2.7" opacity=".85"/><circle cx="478" cy="128" r="2.7" opacity=".85"/>
+            <circle cx="300" cy="116" r="2.5" opacity=".8"/><circle cx="500" cy="116" r="2.5" opacity=".8"/>
+            <circle cx="280" cy="102" r="2.3" opacity=".72"/><circle cx="520" cy="102" r="2.3" opacity=".72"/>
+            <circle cx="262" cy="88" r="2.1" opacity=".62"/><circle cx="538" cy="88" r="2.1" opacity=".62"/>
+            <circle cx="248" cy="72" r="1.9" opacity=".5"/><circle cx="552" cy="72" r="1.9" opacity=".5"/>
+            <circle cx="238" cy="56" r="1.7" opacity=".38"/><circle cx="562" cy="56" r="1.7" opacity=".38"/>
+            <circle cx="232" cy="40" r="1.4" opacity=".26"/><circle cx="568" cy="40" r="1.4" opacity=".26"/>
+            <circle cx="352" cy="168" r="2.6" opacity=".8"/><circle cx="448" cy="168" r="2.6" opacity=".8"/>
+            <circle cx="332" cy="184" r="2.3" opacity=".7"/><circle cx="468" cy="184" r="2.3" opacity=".7"/>
+            <circle cx="316" cy="202" r="2.1" opacity=".6"/><circle cx="484" cy="202" r="2.1" opacity=".6"/>
+          </g>
+          <!-- rising column embers -->
+          <g fill="#FFD79A">
+            <circle cx="392" cy="206" r="2.6" opacity=".9"/><circle cx="410" cy="228" r="2.4" opacity=".85"/>
+            <circle cx="386" cy="252" r="2.8" opacity=".9"/><circle cx="414" cy="276" r="2.5" opacity=".8"/>
+            <circle cx="380" cy="300" r="3" opacity=".95"/><circle cx="420" cy="318" r="2.7" opacity=".85"/>
+            <circle cx="374" cy="342" r="3.2" opacity=".9"/><circle cx="426" cy="358" r="2.9" opacity=".85"/>
+            <circle cx="366" cy="380" r="3.4" opacity=".95"/><circle cx="434" cy="392" r="3" opacity=".8"/>
+          </g>
+          <g fill="#F0785A">
+            <circle cx="356" cy="238" r="2" opacity=".6"/><circle cx="446" cy="262" r="1.9" opacity=".55"/>
+            <circle cx="344" cy="308" r="2.2" opacity=".65"/><circle cx="458" cy="330" r="2.1" opacity=".6"/>
+            <circle cx="336" cy="366" r="2.4" opacity=".7"/><circle cx="470" cy="386" r="2.2" opacity=".6"/>
+            <circle cx="308" cy="288" r="1.7" opacity=".45"/><circle cx="492" cy="300" r="1.6" opacity=".4"/>
+          </g>
+          <!-- burning ground -->
+          <path d="M0 396 L90 388 L200 398 L300 386 L400 396 L500 384 L610 398 L720 388 L800 396 L800 450 L0 450 Z" fill="#1A0F0C"/>
+          <rect y="386" width="800" height="18" fill="#F0785A" opacity=".3"/>
+          <g fill="#FFB25C">
+            <rect class="flick" x="96" y="396" width="16" height="4"/><rect class="flick2" x="234" y="400" width="20" height="4"/>
+            <rect class="flick" x="540" y="394" width="18" height="4"/><rect class="flick2" x="682" y="398" width="15" height="4"/>
+          </g>
+          <!-- two small watchers -->
+          <g fill="#0A0605">
+            <path d="M186 428 q0 -22 9 -22 q9 0 9 22 Z"/><circle cx="195" cy="401" r="7"/>
+            <path d="M212 428 q0 -21 9 -21 q9 0 9 21 Z"/><circle cx="221" cy="403" r="6.5"/>
+          </g>
+          <ellipse cx="208" cy="430" rx="46" ry="7" fill="#F0785A" opacity=".2"/>
+          <!-- ash -->
+          <g fill="#C6BCD2" opacity=".4">
+            <circle cx="86" cy="98" r="1.6"/><circle cx="150" cy="188" r="1.3"/><circle cx="644" cy="112" r="1.5"/>
+            <circle cx="716" cy="200" r="1.4"/><circle cx="104" cy="286" r="1.3"/><circle cx="694" cy="300" r="1.4"/>
+            <circle cx="58" cy="160" r="1.2"/><circle cx="756" cy="152" r="1.2"/>
+          </g>
+        </svg>
+        <div class="cpt-body">
+          <span class="cpt-tag">Direction D · The dramatic one</span>
+          <h4>Rising<small>The phoenix line, made the subject instead of the texture</small></h4>
+          <p>The boldest. Here the <strong>ember column is the shot</strong>. Low angle: embers pour upward off the burning ground in a great column, and at the apex their density <em class="key">momentarily resolves into a pair of outspread wings</em> — held for barely a second — before dispersing back into scattered sparks and reforming. The two figures are tiny at the base, watching.</p>
+          <p>Crucially the wing must <strong>form and dissolve on a strict 10-second cycle</strong>, never as a one-time event, or it becomes the timestamp that gives the loop away. Done right it's the most memorable of the four. Best in 9:16.</p>
+          <div class="meta">
+            <div><span>Lyric anchor</span><p>Rising through the ashes like a phoenix — the record's most vivid image.</p></div>
+            <div><span>Loop engine</span><p>Continuous ember rise; wing coalesces at t=5s, disperses by t=10s. One breath.</p></div>
+            <div><span>Risk</span><p>Highest. The wing is a <em>shape-forming event</em> — the exact thing loops hate. Needs the strictest start=end conditioning.</p></div>
+          </div>
+          <div class="prompt">
+            <div class="prompt-bar"><span>Image prompt — D</span><span class="cnt">9:16 or 16:9 keyframe</span></div>
+            <pre>Dramatic low-angle painterly shot looking up at a towering column of glowing
+embers rising from burning ground into a dark sky. Thousands of individual
+sparks and embers stream upward, dense at the base, thinning as they climb.
+
+Near the top of the column the embers momentarily gather into the suggestion of
+a great bird's outspread wings — a phoenix implied purely by the density and
+arrangement of the sparks, never a solid or literal creature. The shape is
+loose, ambiguous, made only of fire.
+
+At the very bottom of frame, tiny and dwarfed: two small human silhouettes
+standing on scorched ground, watching, warm firelight on their legs.
+
+Deep midnight sky above, warming through violet to rust and orange near the
+ground. Fine grey ash drifts down at the edges of frame.
+
+Palette: brilliant amber and gold embers, coral and rust mid-tones, deep
+midnight blue-violet sky, pale lavender ash.
+Style: painterly retro-futurist matte painting, heavy atmosphere, film grain,
+strong halation and bloom around the embers, 35mm anamorphic. Awe, ascent,
+rebirth.</pre>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="wrap" style="padding-top:44px">
+      <div class="prompt neg">
+        <div class="prompt-bar"><span>Negative prompt</span><span class="cnt">use with all four</span></div>
+        <pre>text, watermark, logo, subtitles, captions, signature, UI elements, camera zoom,
+push-in, dolly, rapid motion, shaky camera, cuts, transitions, people walking,
+figures turning, gesturing, waving, characters facing camera, visible faces,
+blinking, lightning, aircraft, explosions, sudden bursts, exposure flicker,
+brightness ramp, strobing, morphing geometry, warping architecture, extra limbs,
+deformed hands, photorealistic, hyperrealistic, 3D render, plastic, CGI sheen,
+oversaturated, neon, HDR glare, lens flare pops</pre>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">03</span><h2>Loop Mechanics</h2></div>
-    <p class="sec-sub">The technical core — how the seam becomes impossible to find</p>
+    <p class="sec-sub">Unchanged from v1 — this part was never lyric-dependent</p>
 
     <div class="callout teal">
       <span class="tag">The one technique that matters most</span>
-      <p><strong>Don't try to get lucky with a loop. Force it.</strong> Generate <em class="key">one still keyframe</em> first and iterate on the still until it's perfect — far cheaper and more controllable than iterating on video. Then feed that identical image as <strong>both the first frame and the last frame</strong>.</p>
-      <p>Every model with start/end-frame conditioning (Kling 1.6 / 2.x, Luma, Runway Gen-3, and the matching Higgsfield pipelines) is then <em class="key">mathematically obliged</em> to return to its origin. This single decision does more for loopability than everything else on this page combined.</p>
+      <p><strong>Don't try to get lucky with a loop. Force it.</strong> Generate <em class="key">one still keyframe</em> first and iterate on the still — far cheaper than iterating on video. Then feed that identical image as <strong>both the first and the last frame</strong>. Any model with start/end conditioning is then obliged to return to its origin. This single decision does more than everything else combined.</p>
     </div>
 
     <h3>Why the camera moves in an ellipse</h3>
-    <p>A camera that drifts right, then drifts back left, has a <strong>reversal point</strong> — a frame where velocity passes through zero. The eye catches that instantly, and it screams <i>loop</i>.</p>
-    <p>An ellipse has no reversal. Speed stays constant, direction changes continuously, and the path closes on itself.</p>
-
+    <p>A camera that drifts right then back left has a <strong>reversal point</strong> — a frame where velocity passes through zero. The eye catches it instantly and it screams <i>loop</i>. An ellipse has no reversal: constant speed, continuously changing direction, and the path closes on itself.</p>
     <figure>
       <div class="diagram">
-        <svg viewBox="0 0 400 210" role="img" aria-label="Diagram of a closed elliptical camera path with no reversal point, marked at 0, 2.5, 5.0 and 7.5 seconds.">
-          <ellipse cx="200" cy="105" rx="150" ry="66" fill="none" stroke="#3E7C7B" stroke-width="1.5" stroke-dasharray="5 5"/>
-          <path d="M200 39 A150 66 0 0 1 340 92" fill="none" stroke="#F0785A" stroke-width="2.5"/>
-          <path d="M332 78 L343 94 L325 96 Z" fill="#F0785A"/>
-          <circle cx="50" cy="105" r="6" fill="#FFB25C"/>
-          <text x="50" y="132" fill="#FFB25C" font-family="ui-monospace,Menlo,monospace" font-size="11" text-anchor="middle">t=0 / 10.0s</text>
+        <svg viewBox="0 0 400 205" role="img" aria-label="A closed elliptical camera path marked at 0, 2.5, 5.0 and 7.5 seconds, with no reversal point.">
+          <ellipse cx="200" cy="103" rx="150" ry="64" fill="none" stroke="#3E7C7B" stroke-width="1.5" stroke-dasharray="5 5"/>
+          <path d="M200 39 A150 64 0 0 1 340 91" fill="none" stroke="#F0785A" stroke-width="2.5"/>
+          <path d="M332 77 L343 93 L325 95 Z" fill="#F0785A"/>
+          <circle cx="50" cy="103" r="6" fill="#FFB25C"/>
+          <text x="50" y="130" fill="#FFB25C" font-family="ui-monospace,Menlo,monospace" font-size="11" text-anchor="middle">t=0 / 10.0s</text>
           <text x="200" y="30" fill="#C6BCD2" font-family="ui-monospace,Menlo,monospace" font-size="10.5" text-anchor="middle">t=2.5s</text>
-          <text x="368" y="109" fill="#C6BCD2" font-family="ui-monospace,Menlo,monospace" font-size="10.5" text-anchor="middle">t=5.0s</text>
-          <text x="200" y="188" fill="#C6BCD2" font-family="ui-monospace,Menlo,monospace" font-size="10.5" text-anchor="middle">t=7.5s</text>
+          <text x="368" y="107" fill="#C6BCD2" font-family="ui-monospace,Menlo,monospace" font-size="10.5" text-anchor="middle">t=5.0s</text>
+          <text x="200" y="184" fill="#C6BCD2" font-family="ui-monospace,Menlo,monospace" font-size="10.5" text-anchor="middle">t=7.5s</text>
         </svg>
       </div>
-      <figcaption>Over 10 seconds the camera travels roughly 30 cm right and 15 cm up, then continues around and back. Barely perceptible — it reads as "the shot is alive" rather than as a move. Because it is <em>still in motion</em> as it crosses back through t=0, there is no stall to give the loop away.</figcaption>
+      <figcaption>Roughly 30 cm right and 15 cm up over ten seconds, then around and back. It reads as "the shot is alive" rather than as a move — and because the camera is <em>still moving</em> as it crosses back through t=0, there's no stall to give the loop away. If the model fights it, a fully locked-off static camera is the safer fallback.</figcaption>
     </figure>
 
-    <div class="callout">
-      <span class="tag">Simpler fallback</span>
-      <p>A fully <strong>locked-off static camera</strong>, with all motion coming from ash, embers, smoke and fire. This is what VISUALDON does constantly and it loops flawlessly. <em class="key">If the model fights the ellipse, take the static camera</em> — it is the safer of the two.</p>
-    </div>
-
     <h3>Why particles loop for free</h3>
-    <p>Ash and embers <strong>do not need to be cycled.</strong> A stream at constant velocity and constant spawn density is statistically identical at every instant. Frame 0 and frame 240 contain different individual particles in different places — and no viewer alive can tell. The rules are strict but simple: constant spawn rate, constant velocity, spawn and cull outside the frame.</p>
-    <p>This is exactly why the scene is deliberately dominated by ash, ember and smoke — <em class="key">high-entropy, low-structure motion is the most forgiving material a loop can be made of.</em></p>
+    <p>Ash and embers <strong>don't need to be cycled</strong>. A stream at constant velocity and density is statistically identical at every instant — frame 0 and frame 240 hold different particles in different places, and nobody can tell. Constant spawn rate, constant velocity, spawn and cull off-frame. <em class="key">This is exactly why all four directions are built out of ash, ember and smoke.</em></p>
 
-    <h3>Cycle timing · 10.00s @ 24fps = 240 frames</h3>
-    <div class="scroll"><table>
-      <thead><tr><th>Element</th><th>Behaviour</th><th>Period</th></tr></thead>
-      <tbody>
-        <tr><td>Camera</td><td>One continuous elliptical float</td><td class="num">10.0s</td></tr>
-        <tr><td>Iris dilation</td><td>One breath — contract 0→5s, dilate 5→10s, sinusoidal</td><td class="num">10.0s</td></tr>
-        <tr><td>Ash fall</td><td>Constant velocity &amp; density, top→bottom</td><td class="num">continuous</td></tr>
-        <tr><td>Ember rise</td><td>Constant velocity &amp; density, bottom→top</td><td class="num">continuous</td></tr>
-        <tr><td>Fire flicker</td><td>Luminance shimmer along the ridge veins</td><td class="num">2.0s ×5</td></tr>
-        <tr><td>Smoke columns</td><td>Steady rise, slow lateral lean</td><td class="num">continuous</td></tr>
-        <tr><td>Jacket ripple</td><td>Small-amplitude cloth flutter</td><td class="num">5.0s ×2</td></tr>
-      </tbody>
-    </table></div>
-    <p><strong>Nothing enters the frame once. Nothing leaves the frame once. Nothing happens.</strong> State only cycles — that is the entire discipline of a seamless loop.</p>
+    <h3>The safety net</h3>
+    <p>Generate <strong>12 seconds</strong>, take the middle ~11s, then cross-dissolve the final 1.0s over the opening 1.0s to land on exactly 10.00s. In a frame full of drifting particles a 1-second dissolve is invisible. Do it <em class="key">even if the start=end method worked.</em></p>
 
-    <h3>The safety net — overlap-blend in post</h3>
-    <p>AI tools rarely deliver perfect frame identity, so don't rely on it. Generate <strong>12 seconds</strong>, take the middle ~11s, then cross-dissolve the final 1.0s over the opening 1.0s — landing on exactly 10.00s.</p>
-    <div class="prompt"><div class="prompt-bar"><span>Post — blend map</span></div><pre>generated:  [0 ──────────────────────────────────── 12s]
-trim:           [0.5 ────────────────────── 11.5s]
-blend:          [══1s══]                    [══1s══]   ← dissolved together
-final:          [0 ───────────────── 10.00s] ∞</pre></div>
-    <p>Because the frame is full of smoke and drifting particles, a 0.5–1.0s dissolve is <strong>completely invisible</strong> — there is no hard edge or rigid geometry for the eye to catch a ghost on, and the dark, low-detail cave silhouette covers the frame edges where artifacts would otherwise show. Do this <em class="key">even if the start/end-frame method worked.</em> It costs nothing, and it's the difference between a good loop and a seam nobody will ever find.</p>
-
-    <h3>Tempo — this one needs you</h3>
-    <p>I couldn't measure BPM without the audio. It matters for one reason: 10.00s should ideally contain a <strong>whole number of bars</strong>, so the loop breathes with the track instead of drifting against it. In 4/4, <code>bar length = 240 / BPM</code>.</p>
-    <div class="scroll"><table>
-      <thead><tr><th>If BPM is</th><th>10s contains</th><th>Recommendation</th></tr></thead>
-      <tbody>
-        <tr><td class="num">96</td><td class="num">4.00 bars</td><td class="ok">Perfect — keep 10.0s exactly</td></tr>
-        <tr><td class="num">120</td><td class="num">5.00 bars</td><td class="ok">Perfect — keep 10.0s exactly</td></tr>
-        <tr><td class="num">144</td><td class="num">6.00 bars</td><td class="ok">Perfect — keep 10.0s exactly</td></tr>
-        <tr><td class="num">140</td><td class="num">5.83 bars</td><td class="no">Use 9.60s (4 bars) or 10.29s (6)</td></tr>
-        <tr><td class="num">80</td><td class="num">3.33 bars</td><td class="no">Use 9.00s (3 bars) or 12.00s (4)</td></tr>
-      </tbody>
-    </table></div>
-    <p>If you're locked to 10.0s regardless, that's completely fine — it just means the visual cycle and the musical bar slowly phase against each other, which plenty of visualizers do deliberately.</p>
-
-    <h3>Loop-killers — the do-not list</h3>
+    <h3>Loop-killers</h3>
     <div class="scroll"><table>
       <thead><tr><th>Never</th><th>Why</th></tr></thead>
       <tbody>
-        <tr><td class="no">Zoom, dolly-in, or push</td><td>Doesn't close. Instantly visible cut.</td></tr>
-        <tr><td class="no">A blink, lightning, a bird</td><td>A once-per-loop event is a <strong>timestamp</strong>. Fatal.</td></tr>
-        <tr><td class="no">A figure walking or turning</td><td>Same — a one-time action marks the loop point.</td></tr>
-        <tr><td class="no">Exposure or brightness ramps</td><td>The loop point becomes a visible flash.</td></tr>
-        <tr><td class="no">Gusts, bursts, swells</td><td>Breaks the constant-density rule.</td></tr>
-        <tr><td class="no">Text, logos, watermarks</td><td>Also breaks tiling and re-use.</td></tr>
+        <tr><td class="no">Zoom, dolly-in, push</td><td>Doesn't close. Visible cut.</td></tr>
+        <tr><td class="no">A blink, lightning, a bird crossing once</td><td>A once-per-loop event is a <strong>timestamp</strong>. Fatal.</td></tr>
+        <tr><td class="no">A figure standing up, turning, drinking</td><td>Same. The pair must stay still.</td></tr>
+        <tr><td class="no">Exposure or brightness ramps</td><td>The loop point becomes a flash.</td></tr>
+        <tr><td class="no">Gusts, bursts, swells</td><td>Breaks constant density.</td></tr>
         <tr><td class="no">High "motion strength"</td><td>The #1 practical cause of failed loops.</td></tr>
       </tbody>
     </table></div>
@@ -324,196 +736,52 @@ final:          [0 ───────────────── 10.00s] �
 <section>
   <div class="wrap">
     <div class="sec-head"><span class="sec-num">04</span><h2>Generation Spec</h2></div>
-    <p class="sec-sub">Parameters and prompts, ready to paste</p>
-
+    <p class="sec-sub">Settings for the video pass, once a keyframe is approved</p>
     <div class="scroll"><table>
       <thead><tr><th>Setting</th><th>Value</th><th>Reasoning</th></tr></thead>
       <tbody>
-        <tr><td>Pipeline</td><td><strong>Image-to-video</strong>, never text-to-video</td><td>Lock composition in a still first.</td></tr>
-        <tr><td>Conditioning</td><td>Same image as <strong>first and last</strong> frame</td><td>The core technique.</td></tr>
+        <tr><td>Pipeline</td><td><strong>Image-to-video</strong></td><td>Lock composition in a still first.</td></tr>
+        <tr><td>Conditioning</td><td>Same image, <strong>first and last</strong></td><td>The core technique.</td></tr>
         <tr><td>Duration</td><td class="num">gen 12s → deliver 10.00s</td><td>Trim margin for the blend.</td></tr>
-        <tr><td>Frame rate</td><td class="num">24 → interpolate 60</td><td>24 for the film feel; interpolate so the loop is buttery on repeat.</td></tr>
-        <tr><td>Resolution</td><td class="num">2560×1440 or 4K</td><td>Room for the 9:16 crop and re-frames.</td></tr>
-        <tr><td>Motion strength</td><td><strong>LOW</strong> — lowest that still drifts</td><td>Biggest single lever on loopability.</td></tr>
-        <tr><td>Camera control</td><td>Orbit / drift, minimum. <strong>Zoom off.</strong></td><td>Zoom cannot close.</td></tr>
-        <tr><td>Seed</td><td><strong>Fixed.</strong> Vary prompt, never seed.</td><td>Makes A/B comparisons meaningful.</td></tr>
-        <tr><td>Native loop toggle</td><td>Enable if offered</td><td>Free win.</td></tr>
+        <tr><td>Frame rate</td><td class="num">24 → interpolate 60</td><td>Film feel; buttery on repeat.</td></tr>
+        <tr><td>Resolution</td><td class="num">2560×1440 or 4K</td><td>Room for the 9:16 crop.</td></tr>
+        <tr><td>Motion strength</td><td><strong>LOW</strong></td><td>Biggest single lever on loopability.</td></tr>
+        <tr><td>Camera</td><td>Drift only. <strong>Zoom off.</strong></td><td>Zoom cannot close.</td></tr>
+        <tr><td>Seed</td><td><strong>Fixed</strong></td><td>Makes A/B comparisons meaningful.</td></tr>
       </tbody>
     </table></div>
 
-    <div class="prompt">
-      <div class="prompt-bar"><span>Primary prompt — 16:9 master</span><span class="cnt">image-to-video</span></div>
-      <pre>Cinematic anime-influenced painterly wide shot, viewed from inside a dark cave
-mouth looking outward. The jagged near-black cave silhouette frames the top and
-both sides of the frame like a natural vignette, wet rock and a few hanging roots
-stirring faintly in an updraft.
-
-Beyond the cave mouth, far below: a vast valley burning — slow creeping veins of
-orange wildfire tracing the ridgelines like molten circuitry, seen from miles
-away, with lazy columns of smoke rising and leaning.
-
-Filling the pale lavender sky above the valley: a single colossal human eye,
-coral-salmon sclera, glacial-teal iris, gazing down. The iris dilates once,
-slowly and almost imperceptibly, across the shot.
-
-On a moss-covered rock outcrop in the midground stand two tiny hooded figures in
-silhouette, backs to camera, facing the eye. They stand perfectly still; only
-their jackets ripple gently in the heat updraft. They do not walk or turn.
-
-Glowing embers drift steadily upward from the burning valley while fine grey ash
-falls steadily from above; the two particle streams cross through one another at
-constant, unchanging density.
-
-Lighting: warm coral and gold firelight from below, uplighting the underside of
-the rocks and the figures; cool lavender-teal ambient light falling from the eye
-above, rimming the cave lip and the tops of their hoods. Volumetric god rays cut
-through the smoke.
-
-CAMERA: one single continuous, extremely slow elliptical float — drifting gently
-right and upward, then around, left and downward, returning exactly to its
-starting position and orientation. No zoom. No push-in. No cuts. Constant,
-unbroken, barely perceptible motion.
-
-STYLE: painterly retro-futurist matte painting, muted desaturated mid-tones with
-warm highlights, 35mm anamorphic, film grain, gentle halation on the fire, subtle
-chromatic aberration.
-
-LOOP: perfectly seamless loop. Constant particle density throughout. No events,
-no entrances, no exits, no blinking, nothing happens once.</pre>
-    </div>
-
-    <div class="prompt neg">
-      <div class="prompt-bar"><span>Negative prompt</span><span class="cnt">all variants</span></div>
-      <pre>text, watermark, logo, subtitles, captions, signature, UI elements,
-camera zoom, push-in, dolly, rapid motion, shaky camera, whip pan, cuts,
-transitions, people walking, figures turning, gesturing, waving, characters
-facing camera, visible faces, blinking, lightning, birds, aircraft, falling
-rocks, explosions, sudden bursts, exposure flicker, brightness ramp, strobing,
-color shift, morphing geometry, warping architecture, melting rock, extra limbs,
-deformed hands, photorealistic, hyperrealistic, 3D render, plastic, CGI sheen,
-oversaturated, neon, HDR glare, lens flare pops</pre>
-    </div>
-
-    <div class="prompt">
-      <div class="prompt-bar"><span>Vertical variant — 9:16</span><span class="cnt">Shorts / Reels / TikTok</span></div>
-      <pre>Same scene, same palette, same lighting, vertical 9:16 composition.
-
-Stack the frame vertically: the colossal eye occupies the upper third of frame,
-the two tiny hooded silhouettes stand on their mossy outcrop in the centre third,
-and the burning valley with its orange fire veins recedes into the lower third.
-The dark cave silhouette now frames only the left and right edges as narrow
-vertical bands.
-
-Ash falls the full height of frame; embers rise the full height of frame; the
-streams cross at the midpoint where the figures stand.
-
-CAMERA: extremely slow vertical elliptical float, returning exactly to its start
-position. No zoom. Seamless loop, constant particle density, nothing happens once.</pre>
-    </div>
-
-    <div class="prompt">
-      <div class="prompt-bar"><span>Fallback — simplified</span><span class="cnt">if the model over-complicates</span></div>
-      <pre>Painterly wide shot from inside a dark cave looking out at a burning valley far
-below, orange fire veins on the ridgelines, smoke rising. A colossal eye with a
-teal iris and coral sclera fills the pale lavender sky. Two tiny hooded
-silhouettes stand still on a mossy rock, facing it. Embers rise, grey ash falls,
-at constant density. Warm firelight from below, cool light from above. Film
-grain, muted retro grade. Camera: barely-moving slow elliptical drift returning
-to start. No zoom. Seamless loop. Nothing happens.</pre>
-    </div>
-    <p style="font-size:14.5px;color:var(--veil-dim)">Some models choke on long prompts and start inventing events — keep the short one in reserve.</p>
+    <h3>Tempo — still open</h3>
+    <p>I still can't measure BPM without the audio. 10.00s should ideally hold a whole number of bars so the loop breathes with the track. In 4/4, <code>bar = 240 / BPM</code>. At <strong>96, 120 or 144 BPM</strong>, 10.0s is exact. At 140 I'd shift to 9.60s; at 80, to 9.00s. If you'd rather stay at a flat 10s regardless, that's completely fine — the cycle just phases slowly against the bar, which plenty of visualizers do on purpose.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>References</h2></div>
-    <p class="sec-sub">What your five picks have in common — and what I built to</p>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Next</h2></div>
+    <p class="sec-sub">What I need, and what happens after</p>
 
-    <div class="scroll"><table>
-      <thead><tr><th>Reference</th><th>Artist</th><th>What it contributes</th></tr></thead>
-      <tbody>
-        <tr><td><a href="https://www.youtube.com/watch?v=Tx9zMFodNtA">Innerbloom</a></td><td>RÜFÜS DU SOL</td><td>Cinematic patience. Long unhurried takes, moody restraint.</td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=YhUPi6-MQNE">The Drive (Resonance)</a></td><td>VISUALDON</td><td>The seamless-loop grammar itself. Painterly, slow parallax, endless.</td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=G7qxHmtXg-Q">ANOMALY</a></td><td>VISUALDON</td><td>A single vast impossible object over a landscape. <strong>Directly the giant eye.</strong></td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=ypW-lJwsoDE">WORMHOLE</a></td><td>VISUALDON</td><td>Cyclical motion as the loop engine; hypnotic continuous drift.</td></tr>
-        <tr><td><a href="https://www.youtube.com/watch?v=XLHJpBW8Bh4">ODYSSEY</a></td><td>VISUALDON</td><td>Scale and awe; a tiny human against an immense vista.</td></tr>
-      </tbody>
-    </table></div>
-
-    <p>Six things they share, all of which the concept is built to: <strong>painterly, not photoreal</strong>; <strong>a tiny human against something enormous</strong> (four of five); <strong>the camera barely moves</strong>, never zooms; <strong>retro film texture</strong> — grain, halation, muted grade; <strong>a single strong silhouette read</strong>, so the image works as a shape before it works as detail; and above all, <strong>nothing ever happens</strong>. State cycles, events don't occur. That is the whole craft.</p>
-
-    <div class="callout teal">
-      <span class="tag">The happy accident</span>
-      <p><strong>Your album cover is already a VISUALDON frame.</strong> Tiny figures, colossal object, vast vista, painterly, muted retro palette. The concept above is largely just <em class="key">that cover set in motion</em> — which is why I'd expect it to feel immediately right for the release.</p>
+    <div class="callout">
+      <span class="tag">One thing to switch on</span>
+      <p><strong>Higgsfield is connected to your org but disabled for this chat.</strong> Enable it in this chat's connector settings and I can generate the photoreal keyframes directly from the four prompts above — no copy-pasting. Until then the prompts work fine pasted into Higgsfield, Midjourney or Flux by hand.</p>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2>Variations</h2></div>
-    <p class="sec-sub">Four directions, if the primary isn't the one</p>
-
-    <div class="vars">
-      <div class="var">
-        <h4>A · The Pupil<small>The intimate one</small></h4>
-        <p>Frame almost entirely filled by the <strong>iris</strong>. Reflected in its wet surface, in miniature: the burning valley and the two tiny figures. Ash falls <em>across</em> the eye's surface. The loop rides on the reflection's fire flicker and one slow dilation.</p>
-        <p><span class="lbl">Best for</span> the hook or a drop. Very striking, trivially easy to loop.<br><span class="lbl">Risk</span> less narrative; reads as a stock eye shot if the reflection isn't legible.</p>
-      </div>
-      <div class="var">
-        <h4>B · Smoke Veil<small>The most on-theme</small></h4>
-        <p>The eye is alternately <strong>hidden and revealed</strong> by drifting smoke — a veil sweeping across, obscuring, clearing. Literally burning away and re-forming, forever. Loops by making the smoke a continuous horizontal drift rather than a one-time sweep.</p>
-        <p><span class="lbl">Best for</span> the strongest literal expression of <i>blind → but now I see</i>.<br><span class="lbl">Risk</span> the reveal <em>is</em> the event — the smoke must be a continuous band, never a single passing cloud, or it becomes a loop timestamp.</p>
-      </div>
-      <div class="var">
-        <h4>C · Ash Season<small>The grounded one</small></h4>
-        <p>Drop the giant eye entirely. Just the <strong>two figures from behind</strong>, mid-shot, watching a burning horizon. Ash falls heavily. The eye appears only as a faint, ambiguous shape in the clouds — there if you look for it.</p>
-        <p><span class="lbl">Best for</span> restraint, if the lyrics turn out more personal than cosmic.<br><span class="lbl">Risk</span> less immediately arresting as a loop.</p>
-      </div>
-      <div class="var pick">
-        <h4>D · City Burn<small>⚠ The one the lyrics may demand</small></h4>
-        <p>Everything identical — cave framing, giant eye, two figures, palette, loop mechanics — but the valley becomes a <strong>burning city skyline</strong> at dusk. Fire in the towers, smoke between the blocks, streetlight sodium mixing into the ember palette.</p>
-        <p><span class="lbl">Best for</span> a hip-hop record. The explicit rating and the genre both point here, and "burn" in this register very often means a <em class="key">place</em>, not a landscape.</p>
-        <p><strong>This is the variation I'd most expect the lyrics to select.</strong> Flagging it hard: if the lyrics are urban, D becomes the primary and the valley version becomes the alternate.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><h2>Pipeline</h2></div>
-    <p class="sec-sub">Proposed build order — for your approval</p>
-
-    <div class="scroll"><table>
-      <thead><tr><th>#</th><th>Step</th><th>Tool</th><th>Output</th></tr></thead>
-      <tbody>
-        <tr><td class="num">1</td><td>Lock the still keyframe</td><td>Higgsfield Soul / Midjourney / Flux</td><td>1 hero frame, 4K</td></tr>
-        <tr><td class="num">2</td><td>Animate, start = end frame</td><td>Higgsfield (Kling / Luma)</td><td>12s raw, 24fps</td></tr>
-        <tr><td class="num">3</td><td>Trim + overlap-blend</td><td>Resolve / Premiere / ffmpeg</td><td>10.00s seamless</td></tr>
-        <tr><td class="num">4</td><td>Interpolate + grade</td><td>Topaz / RIFE + Resolve</td><td>10.00s @ 60fps</td></tr>
-        <tr><td class="num">5</td><td>9:16 variant</td><td>repeat 1–4</td><td>vertical master</td></tr>
-        <tr><td class="num">6</td><td>Extend for full track</td><td>loop ×20</td><td>3:22 bed</td></tr>
-      </tbody>
-    </table></div>
-    <p>I have a Higgsfield motion-design capability available in this session for step 2 — but per your instruction, <strong>I have not generated anything.</strong></p>
 
     <h3>What I need from you</h3>
     <ol class="asks">
-      <li><strong>The full lyrics.</strong> The one genuinely blocking item — and even just the hook would resolve the valley-vs-city question in variation D, which is the biggest open decision.</li>
-      <li><strong>The BPM</strong> — or just tell me to keep 10.0s flat.</li>
-      <li><strong>Optional but useful:</strong> the audio file itself, or which section this sits under. A visualizer for the hook and one for the outro are different pieces.</li>
+      <li><strong>Pick a direction</strong> — or tell me to render all four as stills so you can choose from photoreal versions. My recommendation is <strong>A</strong>, with <strong>D</strong> as the 9:16 companion.</li>
+      <li><strong>Keep the eye, or drop it?</strong> It's the album's motif but not this song's. I'd keep it subtle — as the sun in A.</li>
+      <li><strong>BPM</strong>, or tell me to hold 10.0s flat.</li>
+      <li><strong>The pair</strong> — is this the two of you, a couple, or deliberately anonymous? Changes their staging and how close they sit.</li>
     </ol>
 
-    <div class="callout">
-      <span class="tag">Approval</span>
-      <p><strong>Nothing has been generated.</strong> Tell me to proceed and I'll start at step 1 — the still keyframe — so we can lock the frame before spending anything on video.</p>
+    <div class="callout gold">
+      <span class="tag">Status</span>
+      <p><strong>No video has been generated.</strong> Say the word and I'll start with stills, so we lock the frame before spending anything on motion.</p>
     </div>
   </div>
 </section>
 
-<footer>THE VEIL BURNS · CONCEPT v1 · AWAITING APPROVAL</footer>
+<footer>PHOENIX HOUR · CONCEPT v2 · AWAITING DIRECTION</footer>
 
 <script>
 (function(){
@@ -527,16 +795,11 @@ to start. No zoom. Seamless loop. Nothing happens.</pre>
     W = r.width; H = r.height;
     c.width = Math.round(W * d); c.height = Math.round(H * d);
     ctx.setTransform(d, 0, 0, d, 0, 0);
-    build();
-  }
-
-  function build(){
     parts = [];
     var n = Math.round(Math.min(150, (W * H) / 7000));
     for (var i = 0; i < n; i++) parts.push(mk(true));
   }
 
-  // ember = rises from below, warm. ash = falls from above, cool.
   function mk(seed){
     var ember = Math.random() < 0.5;
     return {
@@ -552,6 +815,15 @@ to start. No zoom. Seamless loop. Nothing happens.</pre>
     };
   }
 
+  function draw(p){
+    var tw = p.e ? (0.60 + 0.40 * Math.sin(p.p * 2.4)) : 1;
+    ctx.globalAlpha = Math.max(0, p.a * tw);
+    ctx.fillStyle = p.e ? (p.r > 1.5 ? '#FFB25C' : '#F0785A') : '#C6BCD2';
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
   function frame(){
     ctx.clearRect(0, 0, W, H);
     for (var i = 0; i < parts.length; i++){
@@ -561,37 +833,25 @@ to start. No zoom. Seamless loop. Nothing happens.</pre>
       if (p.e && p.y < -14) parts[i] = mk(false);
       else if (!p.e && p.y > H + 14) parts[i] = mk(false);
       if (p.x < -20) p.x = W + 20; else if (p.x > W + 20) p.x = -20;
-
-      var tw = p.e ? (0.60 + 0.40 * Math.sin(p.p * 2.4)) : 1;
-      ctx.globalAlpha = Math.max(0, p.a * tw);
-      ctx.fillStyle = p.e ? (p.r > 1.5 ? '#FFB25C' : '#F0785A') : '#C6BCD2';
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fill();
+      draw(parts[i]);
     }
     ctx.globalAlpha = 1;
     raf = requestAnimationFrame(frame);
+  }
+
+  function still(){
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < parts.length; i++) draw(parts[i]);
+    ctx.globalAlpha = 1;
   }
 
   resize();
   window.addEventListener('resize', function(){
     if (raf) cancelAnimationFrame(raf);
     resize();
-    if (!reduce) raf = requestAnimationFrame(frame);
+    if (reduce) still(); else raf = requestAnimationFrame(frame);
   });
 
-  if (reduce){
-    // Render one static field: the composition without the motion.
-    ctx.clearRect(0, 0, W, H);
-    for (var j = 0; j < parts.length; j++){
-      var q = parts[j];
-      ctx.globalAlpha = q.a;
-      ctx.fillStyle = q.e ? (q.r > 1.5 ? '#FFB25C' : '#F0785A') : '#C6BCD2';
-      ctx.beginPath(); ctx.arc(q.x, q.y, q.r, 0, Math.PI * 2); ctx.fill();
-    }
-    ctx.globalAlpha = 1;
-  } else {
-    raf = requestAnimationFrame(frame);
-  }
+  if (reduce) still(); else raf = requestAnimationFrame(frame);
 })();
 </script>
