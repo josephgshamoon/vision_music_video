@@ -26,9 +26,29 @@ explicit go-ahead that has not yet been given.**
 1. ~~Generate the raised-camera keyframe~~ — done, v1–v10
 2. ~~Show the client, get their pick~~ — done, v10 chosen
 3. ~~Wait for explicit approval~~ — given, on the frame
-4. **Render the video (90 credits)** ← next, awaiting explicit go
-5. Blend + run the QC gate
-6. Show them the clip **and the numbers**
+4. ~~Render the video (90 credits)~~ — done, job `3baf176f-0ce4-4441-ab01-4c012cc2122f`
+5. ~~Blend + run the QC gate~~ — done, **PASS**
+6. **Show them the clip and the numbers** ← next
+
+**Delivered:** `loops/BURN_last_road.mp4` — 229 frames, 9.541667s, 24fps, 1920×1080, silent.
+
+| Check | Raw | Blended | Gate |
+|---|---|---|---|
+| Frozen frames | 0 | **0** | must be 0 ✅ |
+| Loop seam ratio | 5.22× | **1.25×** | < ~1.5× ✅ |
+| Loop jump | 9.92/255 | **2.36/255** | ✅ |
+| Motion spikes | 0 | **0** | ✅ |
+
+The raw render was a hard fail at 5.22× — a clearly visible jolt at the wrap. The 0.5s
+overlap blend is what closed it. Nothing was retimed.
+
+**The one thing still needing human eyes: the walk.** Silhouette area is stable across the
+clip (±3%, no drift), so there is no push-in, and shin width oscillates 36–79px, so the legs
+genuinely move. But the cycle is irregular rather than a clean stride, and no measurement
+settles whether it *reads* as walking. Watch `loops/BURN_last_road_QC3x.mp4` (3× loop,
+gitignored — rebuild with `ffmpeg -stream_loop 2 -i loops/BURN_last_road.mp4 -c copy out.mp4`).
+
+Balance after the render: **104.14** — one full 90-credit retry still covered.
 
 Note the connector drops mid-session and comes back. It is authenticated at org level but
 toggles off per chat (`enabledInChat: false`); if the Higgsfield tools vanish, that is why, and

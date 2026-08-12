@@ -13,7 +13,12 @@
     "up. See the duration note in build_loops.sh."
   ],
   "model": "seedance_2_0",
-  "params": { "aspect_ratio": "16:9", "resolution": "720p", "mode": "std", "duration": 10 },
+  "params": {
+    "aspect_ratio": "16:9",
+    "resolution": "720p",
+    "mode": "std",
+    "duration": 10
+  },
   "fps": 24,
   "overlap": 0.5,
   "clips": [
@@ -48,6 +53,14 @@
       "keyframe": "keyframes/D_Rising_unused.png",
       "generation_id": "602b6d3e-2800-4dbf-b748-cb15546044fe",
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_112405_602b6d3e-2800-4dbf-b748-cb15546044fe.mp4"
+    },
+    {
+      "id": "BURN_last_road",
+      "title": "Last Road (DELIVERED)",
+      "note": "The delivered loop. Seedance 2.0, 10s, 16:9, 1080p, std, silent, keyframe v12 as BOTH start_image and end_image. 90 credits. Blended 0.5s, no retime -> 9.541667s / 229 frames.",
+      "keyframe": "keyframes/CANDIDATE_v12_middlegrade.png",
+      "generation_id": "3baf176f-0ce4-4441-ab01-4c012cc2122f",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260812_132546_3baf176f-0ce4-4441-ab01-4c012cc2122f.mp4"
     }
   ],
   "superseded": [
