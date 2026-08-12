@@ -57,6 +57,58 @@ Concretely it means:
 The project moved through three style eras. Current is the third:
 cel-shaded illustration → painterly matte painting → **Unreal/GTA photoreal**.
 
+### Colour balance — LOCKED
+
+**Cool blue-black night.** Deep blue sky, cool blue shadows. The client explicitly preferred
+the cooler version over the warmer one and asked for "less reddish".
+
+Fire is **confined to three places only**: the burning planet, the valley fires on both flanks,
+and the airborne embers. There must be **no overall red, orange or sepia wash** across the
+image. The look is fierce warm fire against a cold night — high contrast between the two, not a
+uniformly warm frame.
+
+### The figures must NOT be on fire — LOCKED
+
+This was a real error that reached the client and must not recur.
+
+Prompting for "molten rim light" and "rimmed in orange firelight", with a burning globe directly
+behind the pair, caused the image model to paint **fire onto their bodies** — glowing patches
+across clothing that read as the characters being alight.
+
+The correct specification:
+
+- The two figures are **clean, solid, matte black silhouettes**, fully in shadow
+- Their clothing is plain matte black fabric with **no illumination across its surface**
+- **No flames, no glowing patches, no embers** on their bodies, clothing, skin or hair
+- The **only** light on them is a thin, crisp rim tracing the **outer edge** of their contour —
+  shoulders, arms, and the outline of her hair
+- Embers exist in the **air only** and never land on or touch them
+
+**Globe fire and figure lighting are separately controllable.** Turning the fire down on the
+figures does not require turning it down on the planet — an earlier attempt conflated the two
+and flattened the globe into a merely "lit planet" rather than a burning one. Prompt them
+independently: the planet should read unmistakably as a world consumed by fire, while the
+people stay pure dark shapes.
+
+---
+
+## Camera — LOCKED
+
+**Raised third-person GTA chase camera.**
+
+- Positioned roughly **3–4 metres above** the road and several metres **behind** the pair
+- Angled **gently downward**, like the over-the-shoulder camera in a modern open-world game
+- The couple sit in the **lower third** of frame, seen from behind and slightly above
+- The road surface, its ruts and dust, is clearly visible stretching away to the vanishing point
+- Cypresses are seen slightly from above, their tops near eye level
+
+**This helps the loop twice over**, which is why it was adopted beyond the aesthetic:
+
+1. More road surface in frame, and road is a flat evenly-textured plane — the easiest element in
+   the shot to scroll convincingly and match at the loop point.
+2. It pushes the figures lower and smaller in frame, reducing how much leg movement is legible —
+   which is precisely where stride-phase errors would otherwise show.
+
 ---
 
 ## Motion spec — LOCKED
@@ -99,8 +151,8 @@ rather than merely looking off.
 ### Everything else
 - **Embers**: constant density, rising and drifting, **fading softly in and out — never popping**
 - **Valley fires**: steady flicker; smoke columns rise at a constant rate
-- **Camera**: locked, tracking forward at exactly the walkers' pace. No zoom, push-in, dolly,
-  pan, tilt or cuts
+- **Camera**: locked at the raised third-person position described above, tracking forward at
+  exactly the walkers' pace. No zoom, push-in, dolly, pan, tilt or cuts
 - **Light**: perfectly constant. No flares, no surges, no gusts
 
 ---
