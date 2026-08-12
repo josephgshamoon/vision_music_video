@@ -3,6 +3,25 @@
 **Status:** lead direction, superseding A as primary. Keyframe not yet generated.
 **Source:** artist-supplied reference frame (photoreal, 1386×786).
 
+> ### ⚠ This file is incomplete — decisions exist that are not recorded here
+>
+> These were settled with the artist in session `01S2gjhkRYsEEKo6CJUDLgjs`, which ran
+> until 2026-08-12 11:38. The repo's last commit before this one was 2026-08-11 11:40,
+> so roughly a day of locked decisions was never written down, and that session is no
+> longer readable — no transcript reader, no message channel, container gone.
+>
+> **Recovered so far, direct from the artist (authoritative, overrides anything below):**
+>
+> | Decision | Value |
+> |---|---|
+> | Render register | **Unreal Engine** — not generic photoreal |
+> | The Earth | **Stays still.** Motion is small pockets of explosion on its surface |
+> | The figures | **Walking normally**, carried on a loop — *not* standing |
+> | The trees | A recommendation was given and accepted. **Not recovered.** |
+>
+> **Still missing:** the tree recommendation, and anything else settled in that window.
+> Nothing has been reconstructed by guesswork — gaps are left as gaps on purpose.
+
 ---
 
 ## Why this one
@@ -68,9 +87,11 @@ world and never arriving* is a loop that has a reason to be a loop. Higher risk:
 model must hold the parallax relationship (trees move, Earth does not) and must not
 drift, and any error compounds across the shot.
 
-**Recommendation:** ship Option 1. Spend one generation testing Option 2, because if
-it lands it is the better piece.
+**DECIDED: Option 2.** The artist settled this in the prior session — they walk
+normally, and the walk is carried on a loop. Option 1 is recorded above only so the
+tradeoff being accepted is legible; it is not the plan.
 
-Note that **the keyframe is very nearly the same still either way** — the only
-difference is legs mid-stride versus standing. That is why the still can be locked
-before this is settled.
+That makes the treadmill the engineering problem to solve rather than a risk to
+avoid, and it raises the stakes on the trees: the cypress avenue is the self-similar
+element the scroll has to cycle against, so its spacing *is* the loop period. That is
+very likely what the missing tree recommendation was about.
