@@ -216,7 +216,7 @@ footer{padding:54px 0 78px;text-align:center;color:var(--veil-faint);font-family
 
     <div class="callout gold">
       <span class="tag">About these images</span>
-      <p>I drew these <strong>myself, in vector</strong>, so you can see the four ideas right now. They are accurate to composition, palette, staging and light — they are <em>not</em> photoreal renders. Higgsfield is connected to your org but <strong>switched off for this chat</strong>, so I couldn't call it. Flip it on in this chat's connector settings and I'll generate the photoreal versions from the prompts below. See §05.</p>
+      <p>I drew these <strong>myself, in vector</strong>, so you could see the four ideas before anything was rendered. They are accurate to composition, palette, staging and light — they are <em>not</em> the renders. <strong>Higgsfield is connected now</strong>, and all four have since been generated as real keyframes and animated into verified loops — see <a href="#delivered">§03 Delivered</a>. These diagrams stay because they read the staging faster than a render does.</p>
     </div>
 
     <div class="concepts">
@@ -684,9 +684,40 @@ oversaturated, neon, HDR glare, lens flare pops</pre>
   </div>
 </section>
 
+<section id="delivered">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Delivered</h2></div>
+    <p class="sec-sub">Four loops, built and measured — reproducible from an empty checkout</p>
+
+    <p>All four directions were rendered as real keyframes (Higgsfield <code>nano_banana_pro</code>) and animated with <strong>Seedance 2.0</strong>, feeding each keyframe as <em class="key">both</em> <code>start_image</code> and <code>end_image</code> — the §04 technique, applied literally. Each result is then overlap-blended by <code>tools/seamless_blend.sh</code> and measured by <code>tools/verify_loop.py</code>.</p>
+
+    <div class="scroll"><table>
+      <thead><tr><th>Loop</th><th>Frames</th><th>Length</th><th>Seam ratio</th><th>Frozen</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><strong>A</strong> Phoenix Hour</td><td class="num">229</td><td class="num">9.54s</td><td class="num">1.07×</td><td class="num">0</td><td>PASS</td></tr>
+        <tr><td><strong>B</strong> Ash Garden</td><td class="num">229</td><td class="num">9.54s</td><td class="num">0.37×</td><td class="num">0</td><td>PASS</td></tr>
+        <tr><td><strong>C</strong> Frequencies</td><td class="num">229</td><td class="num">9.54s</td><td class="num">0.82×</td><td class="num">0</td><td>PASS</td></tr>
+        <tr><td><strong>D</strong> Rising</td><td class="num">229</td><td class="num">9.54s</td><td class="num">1.21×</td><td class="num">0</td><td>PASS</td></tr>
+      </tbody>
+    </table></div>
+
+    <p><strong>Seam ratio</strong> is the wrap-around jump divided by the clip's own median frame-to-frame motion. <strong>1.0× is the target, not 0×</strong> — it means the loop point looks like any other frame boundary. A ratio near zero would mean the seam is <em>frozen</em>, which is worse, and is why the frozen-frame column exists at all. Unblended, A and D measured 4.6× and 4.2× — visible jolts.</p>
+
+    <div class="callout gold">
+      <span class="tag">Why 9.54s and not 10.00s</span>
+      <p>Seedance returns 241 frames for a 10s request, and the 0.5s blend costs 12 of them. The tempting fix — retiming back up to 10.000s — <strong>duplicates frames</strong>, and a duplicated frame is a dead frame: motion freezes for a beat, then jumps. On <strong>D</strong>, whose subject is fast-moving fire, it read as the picture cutting and resuming. So nothing is retimed. To get a true 10.000s loop, regenerate at ≥10.5s and pass a target length — the trim absorbs the difference and every frame stays unique. Worth doing <em>once the BPM is known</em>; until then 10.000s isn't a real requirement.</p>
+    </div>
+
+    <div class="callout teal">
+      <span class="tag">One thing to look at</span>
+      <p><strong>D doesn't match the others stylistically.</strong> A, B and C are flat painterly illustration; D came back photoreal — volumetric sparks, real smoke, a rendered sky. It's the strongest single image of the four, and it's the wrong material for this set. Either D gets re-rendered in the illustrated style, or the set commits to D's realism and A–C get re-rendered instead. It shouldn't ship as-is alongside them.</p>
+    </div>
+  </div>
+</section>
+
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2>Loop Mechanics</h2></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Loop Mechanics</h2></div>
     <p class="sec-sub">Unchanged from v1 — this part was never lyric-dependent</p>
 
     <div class="callout teal">
@@ -735,7 +766,7 @@ oversaturated, neon, HDR glare, lens flare pops</pre>
 
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2>Generation Spec</h2></div>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Generation Spec</h2></div>
     <p class="sec-sub">Settings for the video pass, once a keyframe is approved</p>
     <div class="scroll"><table>
       <thead><tr><th>Setting</th><th>Value</th><th>Reasoning</th></tr></thead>
@@ -758,30 +789,31 @@ oversaturated, neon, HDR glare, lens flare pops</pre>
 
 <section>
   <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2>Next</h2></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2>Next</h2></div>
     <p class="sec-sub">What I need, and what happens after</p>
 
     <div class="callout">
-      <span class="tag">One thing to switch on</span>
-      <p><strong>Higgsfield is connected to your org but disabled for this chat.</strong> Enable it in this chat's connector settings and I can generate the photoreal keyframes directly from the four prompts above — no copy-pasting. Until then the prompts work fine pasted into Higgsfield, Midjourney or Flux by hand.</p>
+      <span class="tag">Connected</span>
+      <p><strong>Higgsfield is live in this session.</strong> Keyframes and loops for all four directions are generated and committed. Per your standing rule, <strong>stills get locked before anything is spent on motion</strong> — any new direction starts as an image and waits for your yes.</p>
     </div>
 
     <h3>What I need from you</h3>
     <ol class="asks">
-      <li><strong>Pick a direction</strong> — or tell me to render all four as stills so you can choose from photoreal versions. My recommendation is <strong>A</strong>, with <strong>D</strong> as the 9:16 companion.</li>
+      <li><strong>Pick a direction.</strong> All four are now built and watchable, so this is a real comparison rather than a guess. My recommendation is still <strong>A</strong>, with <strong>D</strong> as the 9:16 companion — but see the style note in §03 before locking D.</li>
+      <li><strong>Resolve D's style clash</strong> — re-render D as illustration, or take the whole set photoreal. As of now the four don't look like one release.</li>
+      <li><strong>BPM</strong>, or tell me to hold the length flat. This is what decides whether the 10.000s re-render is worth doing.</li>
       <li><strong>Keep the eye, or drop it?</strong> It's the album's motif but not this song's. I'd keep it subtle — as the sun in A.</li>
-      <li><strong>BPM</strong>, or tell me to hold 10.0s flat.</li>
       <li><strong>The pair</strong> — is this the two of you, a couple, or deliberately anonymous? Changes their staging and how close they sit.</li>
     </ol>
 
     <div class="callout gold">
       <span class="tag">Status</span>
-      <p><strong>No video has been generated.</strong> Say the word and I'll start with stills, so we lock the frame before spending anything on motion.</p>
+      <p><strong>Four loops are built and verified</strong> — 229 frames, 9.54s, 24fps, zero frozen frames, seam ratios 0.37×–1.21×. Rebuild them from nothing with <code>tools/build_loops.sh</code>. Still open: which direction leads, the BPM, and whether to re-render at 1080p for a true 10.000s loop.</p>
     </div>
   </div>
 </section>
 
-<footer>PHOENIX HOUR · CONCEPT v2 · AWAITING DIRECTION</footer>
+<footer>PHOENIX HOUR · CONCEPT v2 · FOUR LOOPS BUILT & VERIFIED · AWAITING DIRECTION</footer>
 
 <script>
 (function(){

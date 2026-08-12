@@ -1,6 +1,32 @@
 # "BURN" — 10-Second Seamless Music Visualizer
 ### Concept & Production Plan · v1 (provisional)
 
+> ## ⛔ v1 is superseded. Read `concept_page.html` for the live concept.
+>
+> This document was written **before the lyrics arrived**. The lyrics moved the setting from a
+> cave mouth in an unnamed landscape to a **Mediterranean rooftop at golden hour**, and made the
+> **phoenix** explicit. The concept that was actually built and shipped is **PHOENIX HOUR (v2)**,
+> in [`concept_page.html`](concept_page.html).
+>
+> **What in here is dead:** §1–§4 (the cave, the colossal eye, the two hooded figures), §6.2–§6.5
+> (the prompts — they describe the cave scene), and §7 (the variations, replaced by v2's four
+> directions). §3.2's palette survives *mostly* intact; v2 revises it.
+>
+> **What in here is still live, and still correct:**
+> - **§5 Loop Mechanics** — identical start/end frame, the elliptical camera, why particles loop
+>   for free, the overlap-blend safety net, the loop-killer list. None of this was ever
+>   lyric-dependent. `tools/seamless_blend.sh` is the direct implementation of §5.4.
+> - **§6.1 Parameters** — the image-to-video pipeline, low motion strength, fixed seed, zoom off.
+> - **§8 Reference Analysis** — the five VISUALDON/RÜFÜS references, and what the set has in common.
+>
+> **One correction to §5.4.** It prescribes "generate 12s, trim, dissolve 1s, land on 10.00s."
+> The delivered loops were generated at 10s, not 12s, so the blend had no headroom to trim from
+> and they land at **9.54s**. `tools/seamless_blend.sh` now takes a target length and does the
+> trim first, which makes §5.4 achievable exactly as written — it needs a source ≥10.5s.
+>
+> **Appendix A is resolved.** The audio and lyrics arrived by other means; the fetch failures
+> recorded there are kept only as a record of what was tried.
+
 **Track:** BURN
 **Artists:** SWITCH O × THE VISION
 **Album:** *BLIND BUT NOW I SEE*
