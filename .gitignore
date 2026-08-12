@@ -1,0 +1,3 @@
+# Intermediate build products. Sources re-download from tools/sources.json;
+# the finished loops in loops/ are committed because they are the deliverable.
+build/

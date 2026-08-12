@@ -1,0 +1,61 @@
+{
+  "_comment": [
+    "Provenance for the BURN loop set. Every delivered loop in loops/ is built",
+    "from one of these Higgsfield generations by tools/build_loops.sh.",
+    "",
+    "All were generated with Seedance 2.0, 16:9, 720p, std mode, 10s requested",
+    "(the model returns 241 frames = 10.041667s at 24fps), using the SAME image",
+    "as both start_image and end_image so the model is obliged to return to its",
+    "origin. That is the core loop technique - see CONCEPT_BURN_10S_LOOP.md 5.1.",
+    "",
+    "Delivered length is 9.541667s (229 frames), not 10.000s: the 0.5s overlap",
+    "blend is subtracted from the source and nothing is retimed to make it back",
+    "up. See the duration note in build_loops.sh."
+  ],
+  "model": "seedance_2_0",
+  "params": { "aspect_ratio": "16:9", "resolution": "720p", "mode": "std", "duration": 10 },
+  "fps": 24,
+  "overlap": 0.5,
+  "clips": [
+    {
+      "id": "A_PhoenixHour",
+      "title": "Phoenix Hour",
+      "note": "Rooftop at golden hour, burning town below. Recommended primary.",
+      "keyframe": "keyframes/A_PhoenixHour.png",
+      "generation_id": "f10c181e-2bd3-4fef-9c10-7c6ce8855ea2",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_111433_f10c181e-2bd3-4fef-9c10-7c6ce8855ea2.mp4"
+    },
+    {
+      "id": "B_AshGarden",
+      "title": "Ash Garden",
+      "note": "Terrace under olive trees, ash falling like snow, one empty chair.",
+      "keyframe": "keyframes/B_AshGarden.png",
+      "generation_id": "104de61a-02ae-4ecd-be90-aaf5b6bb6bdf",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_111144_104de61a-02ae-4ecd-be90-aaf5b6bb6bdf.mp4"
+    },
+    {
+      "id": "C_Frequencies",
+      "title": "Frequencies",
+      "note": "Graphic resonance rings over a burning horizon. The most abstract.",
+      "keyframe": "keyframes/C_Frequencies.png",
+      "generation_id": "b2e046ab-aab8-4f78-84b8-0bcceb790792",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_111144_b2e046ab-aab8-4f78-84b8-0bcceb790792.mp4"
+    },
+    {
+      "id": "D_Rising",
+      "title": "Rising",
+      "note": "Ember column holding a phoenix wing shape. Proposed 9:16 companion.",
+      "keyframe": "keyframes/D_Rising_unused.png",
+      "generation_id": "602b6d3e-2800-4dbf-b748-cb15546044fe",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_112405_602b6d3e-2800-4dbf-b748-cb15546044fe.mp4"
+    }
+  ],
+  "superseded": [
+    {
+      "id": "A1_PhoenixHour_v1",
+      "note": "First take of A, from an uploaded start frame. Replaced by A_PhoenixHour, which re-staged the town closer and warmed the key. Verifies clean (1.18x) but is not delivered.",
+      "generation_id": "b1fb2f80-1029-4b25-a5e1-831cbe18d1c0",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_111158_b1fb2f80-1029-4b25-a5e1-831cbe18d1c0.mp4"
+    }
+  ]
+}
