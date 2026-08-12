@@ -13,18 +13,30 @@ Written: 2026-08-12
 
 ## Where the job actually is
 
-Everything is decided. **One thing is outstanding: the client wants the camera raised** to a
-third-person GTA chase angle, and that keyframe has **not been generated yet** because the
-Higgsfield connector kept dropping.
+**UPDATED 2026-08-12 — the raised-camera keyframe is DONE and CHOSEN.**
 
-So the immediate next action is:
+The client picked **`keyframes/CANDIDATE_RAISED_v10_bigfullball.png`** (job
+`73c2c7a3-a529-41f3-a6a9-8f931165b5fe`) — *"This one is my favourite."* Ten candidates got
+there; 22 credits spent; balance **198.14**. See LOCKED_SPEC for the accepted trade-offs on
+that frame and the loop risk it introduces.
 
-1. Generate the raised-camera keyframe (prompt below, 2 credits)
-2. Show the client, get their pick
-3. **Wait for explicit approval**
-4. Render the video (90 credits)
+So steps 1–3 below are complete. **The immediate next action is step 4, and it needs an
+explicit go-ahead that has not yet been given.**
+
+1. ~~Generate the raised-camera keyframe~~ — done, v1–v10
+2. ~~Show the client, get their pick~~ — done, v10 chosen
+3. ~~Wait for explicit approval~~ — given, on the frame
+4. **Render the video (90 credits)** ← next, awaiting explicit go
 5. Blend + run the QC gate
 6. Show them the clip **and the numbers**
+
+Note the connector drops mid-session and comes back. It is authenticated at org level but
+toggles off per chat (`enabledInChat: false`); if the Higgsfield tools vanish, that is why, and
+the client has to re-enable it in this chat's connector settings.
+
+`tools/seamless_blend.sh` was broken on this branch and is now fixed — it parsed duration from
+`ffmpeg -i` stderr, which exits non-zero and killed the script under its own `set -o pipefail`.
+Step 5 would have failed on arrival. Verified working.
 
 ---
 

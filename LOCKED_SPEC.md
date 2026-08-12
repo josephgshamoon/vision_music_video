@@ -19,6 +19,36 @@ Not three videos. **One.** (Scope was narrowed from 3 → 1.)
 
 ## The image — LOCKED, do not regenerate
 
+> ### ✅ FINAL FRAME CHOSEN — 2026-08-12
+>
+> **`keyframes/CANDIDATE_RAISED_v10_bigfullball.png`** — Higgsfield job
+> `73c2c7a3-a529-41f3-a6a9-8f931165b5fe`. Client's words: *"This one is my favourite."*
+>
+> This is the raised-camera frame the handover was waiting on. It supersedes
+> `CANDIDATE_FIRE2_full_globe.png` as the frame to animate. Ten candidates were generated to
+> get here (`CANDIDATE_RAISED_camera` = v1, then `_v2` … `_v10`); all are kept in `keyframes/`
+> so the progression stays auditable.
+>
+> **Known and accepted trade-offs.** These were raised with the client before they chose, and
+> the choice was made anyway. They are not defects to "fix":
+>
+> - The top curve of the globe is **clipped by the frame**. The earlier "whole globe"
+>   requirement was traded for scale. `_v9` is the complete-circle alternative if this is ever
+>   reversed.
+> - The figures are **larger and closer** than in `_v9`, and the camera reads lower.
+> - Their rim-light is a **pronounced cool blue edge** rather than the dim restrained edge.
+> - The globe reads slightly less violently ablaze than `_v9`.
+>
+> **The one live risk this creates — see Motion spec.** LOCKED_SPEC adopted the raised camera
+> partly because it pushes the figures smaller in frame and *reduces how much leg movement is
+> legible*. v10 gives that back: bigger figures, lower camera, more visible stride. The walking
+> loop is already the highest-risk element in the job, so this raises the chance the render
+> needs the reserve retry.
+>
+> **Technique worth keeping:** passing the previous frame as an `image` reference to
+> `nano_banana_pro` is what held the characters identical across v6–v9. Generating from text
+> alone lost them immediately (that is why v10's figures drifted).
+
 The approved keyframe is the "last road" composition:
 
 - Two figures walking **away from camera**, side by side, down a pale dirt road running dead
