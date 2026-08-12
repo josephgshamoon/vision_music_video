@@ -57,7 +57,7 @@
     {
       "id": "BURN_last_road",
       "title": "Last Road (DELIVERED)",
-      "note": "The delivered loop. Seedance 2.0, 10s, 16:9, 1080p, std, silent, keyframe v12 as BOTH start_image and end_image. 90 credits. Blended 0.5s, no retime -> 9.541667s / 229 frames.",
+      "note": "The delivered loop. Seedance 2.0, 10s, 16:9, 1080p, std, silent, keyframe v12 as BOTH start_image and end_image. 90 credits. The raw render judders in its last ~2s (a 4-frame cadence from frame 190 on), so the source is trimmed to 7.875s BEFORE blending, then blended 0.5s with no retime -> 7.375s / 177 frames. Loop 1.04x, pace cv 0.055, both gates pass.",
       "keyframe": "keyframes/CANDIDATE_v12_middlegrade.png",
       "generation_id": "3baf176f-0ce4-4441-ab01-4c012cc2122f",
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260812_132546_3baf176f-0ce4-4441-ab01-4c012cc2122f.mp4"
@@ -69,6 +69,12 @@
       "note": "First take of A, from an uploaded start frame. Replaced by A_PhoenixHour, which re-staged the town closer and warmed the key. Verifies clean (1.18x) but is not delivered.",
       "generation_id": "b1fb2f80-1029-4b25-a5e1-831cbe18d1c0",
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260811_111158_b1fb2f80-1029-4b25-a5e1-831cbe18d1c0.mp4"
+    },
+    {
+      "id": "BURN_v2_reroll",
+      "note": "Reserve re-render, 90 credits, same keyframe, prompt rewritten to force a constant pace. It did not work: pace got worse, not better (cv 0.328 vs 0.275, ends/middle 0.82 vs 0.97 - textbook ease in/out) plus a motion spike at ~6.3s. Trimming its ease-in still failed at cv 0.310. Not used. The lesson is that prompt wording does not beat the structural pull of start=end conditioning; trimming does.",
+      "generation_id": "9ecb5b96-6798-4af5-a940-df87460a7b4c",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3CTWkaWL57cqtPY0K9yR9Fc5srU/hf_20260812_145247_9ecb5b96-6798-4af5-a940-df87460a7b4c.mp4"
     }
   ]
 }

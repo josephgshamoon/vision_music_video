@@ -30,25 +30,41 @@ explicit go-ahead that has not yet been given.**
 5. ~~Blend + run the QC gate~~ — done, **PASS**
 6. **Show them the clip and the numbers** ← next
 
-**Delivered:** `loops/BURN_last_road.mp4` — 229 frames, 9.541667s, 24fps, 1920×1080, silent.
+**Delivered:** `loops/BURN_last_road.mp4` — 177 frames, 7.375s, 24fps, 1920×1080, silent.
 
-| Check | Raw | Blended | Gate |
-|---|---|---|---|
-| Frozen frames | 0 | **0** | must be 0 ✅ |
-| Loop seam ratio | 5.22× | **1.25×** | < ~1.5× ✅ |
-| Loop jump | 9.92/255 | **2.36/255** | ✅ |
-| Motion spikes | 0 | **0** | ✅ |
+| Check | Gate | Result |
+|---|---|---|
+| Frozen frames | must be 0 | **0** ✅ |
+| Loop seam ratio | < ~1.5× | **1.04×** ✅ |
+| Pace cv | < 0.25 | **0.055** ✅ |
+| Deepest stall | > 0.55× | **0.85×** ✅ |
 
-The raw render was a hard fail at 5.22× — a clearly visible jolt at the wrap. The 0.5s
-overlap blend is what closed it. Nothing was retimed.
+## The judder, and why the re-render did not fix it
 
-**The one thing still needing human eyes: the walk.** Silhouette area is stable across the
-clip (±3%, no drift), so there is no push-in, and shin width oscillates 36–79px, so the legs
-genuinely move. But the cycle is irregular rather than a clean stride, and no measurement
-settles whether it *reads* as walking. Watch `loops/BURN_last_road_QC3x.mp4` (3× loop,
-gitignored — rebuild with `ffmpeg -stream_loop 2 -i loops/BURN_last_road.mp4 -c copy out.mp4`).
+The first render passed every loop check and the client still rejected it on sight —
+*"they look like they are stopping or moving faster at times."* The loop gate could not see it,
+so `tools/verify_pace.py` now exists to catch it. It measures scroll speed on a strip of road
+containing no figures, no fire and no sky, and gates on how steady that series is.
 
-Balance after the render: **104.14** — one full 90-credit retry still covered.
+Diagnosis: the **raw** render judders in its final ~2 seconds — a regular 4-frame cadence from
+frame 190 on, dipping to 6% of normal scroll speed. Not a blend artifact; it is in the source.
+The 0.5s blend removes 12 frames and the judder region is ~50, so blending could never reach it.
+
+**The 90-credit reserve re-render was spent and did not help.** Rewriting the prompt to hammer
+constant pace made it worse: cv 0.328 vs 0.275, ends/middle 0.82 vs 0.97 — textbook ease
+in/out, plus a new motion spike at ~6.3s. Trimming its ease-in still failed at cv 0.310.
+
+**What actually worked, at zero cost: trim the bad tail off the FIRST render before blending.**
+Cutting at 7.875s and then blending gives cv 0.055 and a 1.04× seam — the cleanest loop in the
+job. The cost is duration, 7.375s instead of 9.54s, which is free because nothing is tempo-synced
+and a loop simply repeats more times (27.4 cycles covers the 3:22 track).
+
+**Rule for next time:** wording does not beat the structural pull of start=end conditioning.
+Trimming does. Generate longer than needed and cut the ends — Seedance accepts up to 15s, so a
+15s source yields a comfortable 10.000s after trimming both ends, using the target-duration
+argument of `seamless_blend.sh`.
+
+Balance: **14.14**. Both renders are spent. Any further generation needs a top-up.
 
 Note the connector drops mid-session and comes back. It is authenticated at org level but
 toggles off per chat (`enabledInChat: false`); if the Higgsfield tools vanish, that is why, and
