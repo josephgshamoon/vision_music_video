@@ -151,6 +151,34 @@ people stay pure dark shapes.
   the main way AI video breaks. This is a loop-safety choice, not an aesthetic one.
 - Her long dark hair drifts and lifts gently in the hot updraft; his t-shirt ripples faintly
 
+### ⛔ MEASURED AND FALSE — the periodicity assumption below does not hold
+
+**Do not build on this section without reading this box.** Tested 2026-08-12 against two
+separate 90-credit renders. The claim that the cypress avenue makes the shot periodic, and
+therefore loopable, is **false in practice.**
+
+Searching every candidate loop point in both renders:
+
+| Match tested | Best achievable | Normal frame-to-frame | Ratio |
+|---|---|---|---|
+| Whole frame, render 1 | 10.83 | 2.26 | **4.8×** |
+| Whole frame, render 2 | 9.28 | 1.83 | **5.1×** |
+| Road + trees only, render 1 | 19.74 | 3.62 | **5.4×** |
+
+A cut is invisible only when its difference is near the consecutive-frame figure. Nothing
+comes close. Restricting the match to geometry alone — excluding the fire and smoke that were
+never going to repeat — makes it *worse*, which is the decisive result: **the trees themselves
+never realign.** The model does not render a rigorously periodic avenue; spacing is irregular
+and the hills and fires evolve continuously.
+
+**Consequence.** A forward-travelling camera cannot loop unless the world repeats exactly.
+This one does not, so the shot cannot be looped by any post-processing. A crossfade produces a
+visible dissolve (the client saw it immediately, once per cycle). A hard cut produces a visible
+jump. A shorter blend just makes the dissolve quicker. These are the same defect in three forms.
+
+**The forward walk and the seamless loop are mutually exclusive here. One of them has to go.**
+That is a creative decision, not a technical one, and it is unresolved.
+
 ### The walk and the trees — the load-bearing decision
 - Over the loop, the pair advance **exactly ONE cypress-spacing**
 - The cypresses **do move** — they drift toward camera and past the frame edges, each advancing
