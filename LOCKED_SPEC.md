@@ -351,3 +351,43 @@ them legitimately.
 7. Re-roll from reserve if anything fails
 
 Never spend without an explicit go-ahead.
+
+---
+
+## No-credit continuity: five approaches, all measured, all insufficient
+
+The client asked for one continuous 3-minute walk **without generating anything**. That means
+making 7.375s of footage read as 180s. Every no-cost avenue has been tested and measured
+against **2.26** — the consecutive-frame difference an invisible join would have to approach.
+
+| Approach | Best result |
+|---|---|
+| Direct cut, any point, either render | 4.8× |
+| Short cycles, down to 0.5s | 3.17× |
+| Per-region cut (sky / ground / edges) | 6–10× everywhere |
+| Ground-only masked dissolve | Works — but disguise, not removal |
+| Zoom self-similarity (Droste loop) | 9.2× |
+
+The last deserves recording because it is the one that *should* have worked. Walking a straight
+avenue is normally self-similar: pass one tree and the view ahead is a magnified version of the
+view before, which permits an endless zoom with no cut anywhere. Searching scale factors 1.02–1.55
+about a grid of candidate vanishing points against several end frames, the best match is 9.2×.
+The avenue is not regular enough — tree spacing is irregular and the fires and landscape evolve.
+
+**Conclusion, so this is not retested a sixth time: no local processing turns this clip into a
+continuous 3-minute walk.** New footage is the only mechanism. Without it the ceiling is a
+disguised join every 7.4s, and `tools/masked_blend.py` is the best disguise available.
+
+### Pricing, preflighted only — nothing spent
+
+| Option | Credits | Rate |
+|---|---|---|
+| `video_extension`, 30s, 720p | 195 | 6.5/s |
+| `video_extension`, 10s, 720p | 65 | 6.5/s |
+| Fresh render, 15s, 720p | 67.5 | 4.5/s |
+| Fresh render, 15s, 1080p | 135 | 9/s |
+
+`video_extension` (seedance 2.5) continues an existing clip rather than restarting it, so it is
+the only mechanism that produces genuinely joinless walking. An unbroken 3 minutes costs about
+**1,170** — more than the 1,010 balance. 1,010 buys roughly 155s, giving about 2:43 continuous.
+Note extension is capped at 720p, below the current 1080p master.
